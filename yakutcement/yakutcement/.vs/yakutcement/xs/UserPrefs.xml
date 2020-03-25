@@ -1,0 +1,28 @@
+﻿<Properties StartupConfiguration="{0F9AE4F7-5827-487F-8868-7150E1710787}|Default">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Quarry.cs">
+    <Files>
+      <File FileName="Person.cs" Line="1" Column="1" />
+      <File FileName="Client.cs" Line="31" Column="16" />
+      <File FileName="Plant.cs" Line="13" Column="14" />
+      <File FileName="Quarry.cs" Line="16" Column="27" />
+    </Files>
+    <Pads>
+      <Pad Id="ProjectPad">
+        <State name="__root__">
+          <Node name="yakutcement" expanded="True">
+            <Node name="yakutcement" expanded="True">
+              <Node name="Quarry.cs" selected="True" />
+            </Node>
+          </Node>
+        </State>
+      </Pad>
+    </Pads>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.ItemProperties.yakutcement PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MultiItemStartupConfigurations />
+</Properties>
