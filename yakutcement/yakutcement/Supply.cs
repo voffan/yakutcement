@@ -15,7 +15,6 @@ namespace yakutcement
 		
         [Key]
         public int SuppId { get; set; }
-		[ForeignKey("SuppId")]
         public string Name { get; set; }
 		public string Info { get; set; }
 		public double Price { get; set; }
