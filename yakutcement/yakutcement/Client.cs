@@ -15,6 +15,7 @@ namespace yakutcement
     public class Client
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         [StringLength(300)]
         public string Name { get; set; }
