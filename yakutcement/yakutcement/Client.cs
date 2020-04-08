@@ -15,13 +15,15 @@ namespace yakutcement
     public class Client
     {
         [Key]
-        public int PersonId { get; set; }
-        [ForeignKey("PersonId")]
-        public virtual Person Client { get; set; }
+        public int Id { get; set; }
+        [StringLength(300)]
         public string Name { get; set; }
         public string Address { get; set; }
+        [StringLength(12)]
         public string Telephone { get; set; }
+        [StringLength(255)]
         public string Email { get; set; }
+        [StringLength(20)]
         public string Inn { get; set; }
         //public ClientType Type { get; set; }
     }

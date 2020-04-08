@@ -14,6 +14,7 @@ namespace yakutcement
     public class Person
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public String FirstName { get; set; }
         public String SecondName { get; set; }
