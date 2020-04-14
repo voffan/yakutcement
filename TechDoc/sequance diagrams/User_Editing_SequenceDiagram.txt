@@ -1,0 +1,33 @@
+// Диаграмма последовательностей для объекта User Editing
+// написана на sequencediagram.org
+title Editing(AllUsers)
+
+database СУБД
+participant Yakutcement.UserEditing
+actor Пользователь
+
+activate Yakutcement.UserEditing
+Yakutcement.UserEditing->Пользователь:Отображает форму редактирования (пустую)
+Пользователь->Yakutcement.UserEditing:Вводит id пользователя
+Пользователь->Yakutcement.UserEditing:Нажимает кнопку "Найти"
+activate Yakutcement.UserEditing
+Yakutcement.UserEditing->СУБД:Запрашивает данные пользователя (Person)
+СУБД->Yakutcement.UserEditing:Объект Person
+Yakutcement.UserEditing->Пользователь:Отображает форму редактирования (с данными пользователя)
+deactivate Yakutcement.UserEditing
+Пользователь->Yakutcement.UserEditing:Вводит изменения
+Пользователь->Yakutcement.UserEditing:Нажимает кнопку "Изменить"
+activate Yakutcement.UserEditing
+Yakutcement.UserEditing->Пользователь:Отображает форму введения пароля
+Пользователь->Yakutcement.UserEditing:Вводит пароль
+Yakutcement.UserEditing->СУБД: Запрашивает данные пользователя
+СУБД->Yakutcement.UserEditing: Объект Person
+box over Yakutcement.UserEditing: Функция проверки пароля
+deactivate Yakutcement.UserEditing
+Yakutcement.UserEditing->СУБД: Запрашивает данные пользователя
+СУБД->Yakutcement.UserEditing:Объект Person
+box over Yakutcement.UserEditing:Функция изменения пользователя
+Yakutcement.UserEditing->СУБД: Функция изменения данных СУБД
+Пользователь->Yakutcement.UserEditing:Нажимает кнопку "Закрыть"
+deactivate Yakutcement.UserEditing
+
