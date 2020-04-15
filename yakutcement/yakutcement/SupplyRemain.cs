@@ -10,6 +10,7 @@ namespace yakutcement
     public class SupplyRemain
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int SupplyId { get; set; }
         [ForeignKey("SupplyId")]
