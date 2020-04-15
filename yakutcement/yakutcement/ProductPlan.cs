@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace yakutcement
 {
-    //public enum Progress { start, inwork, done } ?
+    public enum Progress { inplan, inwork, done }
 
     public class ProductPlan
     {
@@ -18,12 +18,12 @@ namespace yakutcement
         public DateTime Date { get; set; }
         public double Value { get; set; }
         [StringLength(200)]
-        public string Progress { get; set; }
-        //public Progress Progress { get; set; }
+        public Progress Progress { get; set; }
         public int ProductId { get; set; }
         [ForeignKey("ProductId")]
         public virtual Product Product { get; set; }
-        [ForeignKey("MasterId")]
-        public virtual Person Master { get; set; }
+        public int ManagerId { get; set; }
+        [ForeignKey("ManagerId")]
+        public virtual Person Manager { get; set; }
     }
 }
