@@ -20,6 +20,6 @@ namespace yakutcement
         public int QuarterMasterId { get; set; }
         [ForeignKey("QuarterMasterId")]
         public virtual Person QuarterMaster { get; set; }
-        public virtual Warehouse Warehouse { get; set; }
+        //public virtual Warehouse Warehouse { get; set; }
     }
 }
