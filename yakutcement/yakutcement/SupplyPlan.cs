@@ -12,9 +12,9 @@ namespace yakutcement
     {
         [Key]
         public int Id { get; set; }
-	public DateTime Date { get; set; }
-	public double Value { get; set; }
-	public string Progress { get; set; }
+	    public DateTime Date { get; set; }
+	    public double Value { get; set; }
+	    public string Progress { get; set; }
         public int SupplyId { get; set; }
         [ForeignKey("SupplyId")]
         public virtual Supply Supply { get; set; }

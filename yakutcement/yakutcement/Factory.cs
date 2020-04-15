@@ -10,6 +10,7 @@ namespace yakutcement
     public class Factory
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int MasterId { get; set; }
         [ForeignKey("MasterId")]
