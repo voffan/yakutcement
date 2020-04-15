@@ -1,0 +1,15 @@
+title Autoriaztion
+
+participant Person
+participant YakutCement
+participant DATA
+
+Person<-YakutCement:Отправляет форму авторизации
+Person->YakutCement:Вводит свой Логин
+Person->YakutCement:Вводит свой Пароль
+Person->YakutCement:Отправляет форму('Войти')
+YakutCement->DATA:Делает запрос на данные(по логину)
+YakutCement<-DATA:Отправляет данные(Пользователя)
+note over YakutCement:Делает проверку по данным
+YakutCement-->Person:Если данные верные открывает доступ
+YakutCement-->Person:Если данные не верные выдает ошибку(и реализовать переход на первую строку)
