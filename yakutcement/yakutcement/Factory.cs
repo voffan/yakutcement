@@ -18,6 +18,6 @@ namespace yakutcement
         public int PlantId { get; set; }
         [ForeignKey("PlantId")]
         public virtual Plant Plant { get; set; }
-        public virtual ICollection<ProductionLine> ProductionLines { get; set; }
+        //public virtual ICollection<ProductionLine> ProductionLines { get; set; }
     }
 }

@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace yakutcement
 {
-    public class Supply
+    /*public class Supply
     {
 		
         [Key]
@@ -17,5 +17,5 @@ namespace yakutcement
 		[ForeignKey("PlantId")]
 		public virtual Plant Plant { get; set; }
 		
-    }
+    }*/
 }
