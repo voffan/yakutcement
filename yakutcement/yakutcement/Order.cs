@@ -5,7 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-
+enum quantity{kg,upakovka,paket}
 namespace yakutcement
 {
     public enum OrderStatus { Completed, Uncompleted }
@@ -16,8 +16,10 @@ namespace yakutcement
         public int OrderId { get; set; }
         public DateTime Date { get; set; }
         public OrderStatus Status { get; set; }
-        //public int ClientId { get; set; }
-        //[ForeignKey("ClientId")]
-        public string Unit { get; set; }
+        public int ClientId { get; set; }
+        [ForeignKey("ClientId")]
+        public int ManagerId { get; set; }
+        [ForeignKey("PersonId")]
+        public quantity Unit { get; set; }
     }
 }
