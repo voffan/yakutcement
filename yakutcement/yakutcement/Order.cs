@@ -5,10 +5,11 @@ using System.Text;
 using System.Threading.Tasks;
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
-enum quantity{kg,upakovka,paket}
+
 namespace yakutcement
 {
     public enum OrderStatus { Completed, Uncompleted }
+    public enum Quantity { kg, upakovka, paket }
 
     public class Order
     {
@@ -18,8 +19,9 @@ namespace yakutcement
         public OrderStatus Status { get; set; }
         public int ClientId { get; set; }
         [ForeignKey("ClientId")]
+        public virtual Client Client { get; set; }
         public int ManagerId { get; set; }
         [ForeignKey("PersonId")]
-        public quantity Unit { get; set; }
+        public Quantity Unit { get; set; }
     }
 }
