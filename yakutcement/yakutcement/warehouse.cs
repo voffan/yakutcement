@@ -8,7 +8,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace yakutcement
 {
-    /*public class Supply
+    /*public class Warehouse
     {
 		
         [Key]
