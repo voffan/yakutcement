@@ -13,9 +13,9 @@ namespace yakutcement
 		
         [Key]
         public int Id { get; set; }
-		public double Value { get; set; }
-		[ForeignKey("PlantId")]
-		public virtual Plant Plant { get; set; }
+	public double Value { get; set; }
+	[ForeignKey("PlantId")]
+	public virtual Plant Plant { get; set; }
 		
     }*/
 }
