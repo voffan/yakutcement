@@ -8,18 +8,19 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace yakutcement
 {
-    public class SupplyPlan
-    {
-        [Key]
-        public int Id { get; set; }
-	    public DateTime Date { get; set; }
-	    public double Value { get; set; }
-	    public string Progress { get; set; }
-        public int SupplyId { get; set; }
-        [ForeignKey("SupplyId")]
-        public virtual Supply Supply { get; set; }
-        public int MasterId{ get; set; }
-        [ForeignKey("MasterId")]
-        public virtual Person Master { get; set; }
-    }
+	public enum Progress { inplan, inwork, done }
+	public class SupplyPlan
+	{
+		[Key]
+		public int Id { get; set; }
+		public DateTime Date { get; set; }
+		public double Value { get; set; }
+		public Progress Progress { get; set; }
+		public int SupplyId { get; set; }
+		[ForeignKey("SupplyId")]
+		public virtual Supply Supply { get; set; }
+		public int MasterId{ get; set; }
+		[ForeignKey("MasterId")]
+		public virtual Person Master { get; set; }
+	}
 }
