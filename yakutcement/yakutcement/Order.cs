@@ -14,6 +14,7 @@ namespace yakutcement
     public class Order
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int OrderId { get; set; }
         public DateTime Date { get; set; }
         public OrderStatus Status { get; set; }
