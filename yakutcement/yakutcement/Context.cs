@@ -13,7 +13,8 @@ namespace yakutcement
         }
 
         public virtual DbSet<Client> Clients { get; set; }
-		public virtual DbSet<ProductPlan> ProductPlan { get; set; }
+	public virtual DbSet<ProductPlan> ProductPlan { get; set; }
+	public virtual DbSet<SupplyPlan> SupplyPlan{ get; set; }
 
 
     }
