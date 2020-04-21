@@ -17,6 +17,7 @@ namespace yakutcement
 	public virtual DbSet<ProductPlan> ProductPlan { get; set; }
 	public virtual DbSet<ProductionLine> ProductionLines { get; set; }
 	public virtual DbSet<SupplyPlan> SupplyPlan{ get; set; }
+	public virtual DbSet<Warehouse> Warehouse { get; set; }
 <<<<<<< HEAD
     public virtual DbSet<ProductOperation> ProductOperation { get; set; }
 =======
