@@ -8,14 +8,17 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace yakutcement
 {
-    /*public class Warehouse
+    public class Warehouse
     {
 		
         [Key]
+	[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
 	public double Value { get; set; }
 	[ForeignKey("PlantId")]
 	public virtual Plant Plant { get; set; }
+	[ForeignKey("PersonId")]
+	public virtual Person HouseKeeper { get; set; }
 		
-    }*/
+    }
 }
