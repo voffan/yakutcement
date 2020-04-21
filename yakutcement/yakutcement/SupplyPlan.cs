@@ -12,6 +12,7 @@ namespace yakutcement
 	public class SupplyPlan
 	{
 		[Key]
+        	[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }
 		public DateTime Date { get; set; }
 		public double Value { get; set; }
