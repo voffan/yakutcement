@@ -15,11 +15,11 @@ namespace yakutcement
 		
         [Key]
 		[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
-        public int SuppId { get; set; }
+        public int SupplyId { get; set; }
         public string Name { get; set; }
 		public string Info { get; set; }
 		public double Price { get; set; }
-		public virtual SupplyType SupplyType { get; set; }
+		public SupplyType SupplyType { get; set; }
 		public virtual Quarry Quarry { get; set; }
 		
     }
