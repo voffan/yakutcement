@@ -11,7 +11,15 @@ namespace yakutcement
 	public class LineSpeed
 	{
 		[Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }
+        public int ProductionLineId { get; set; }
+        [ForeignKey("ProductionLineId")]
+        public ProductionLine ProductionLine { get; set; }
+        public int ProductId { get; set; }
+        [ForeignKey("ProductId")]
+        public Product Product { get; set; }
 		public double Speed { get; set; }
+
 	}
 }
