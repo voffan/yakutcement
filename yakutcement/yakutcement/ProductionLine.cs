@@ -14,7 +14,6 @@ namespace yakutcement
 		[Key]
         [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-		[StringLength(300)]
 		public Status Status { get; set; }
 		public int FactoryId { get; set; }
 		[ForeignKey("FactoryId")]
