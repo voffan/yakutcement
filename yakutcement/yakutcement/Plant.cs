@@ -21,5 +21,7 @@ namespace yakutcement
         // some other fields
 
         public virtual ICollection<Quarry> Quarries { get; set; }
+        public virtual ICollection<Factory> Factories { get; set; }
+        public virtual ICollection<Wherehouse> Wherehouses { get; set; }
     }
 }

@@ -22,7 +22,7 @@ namespace yakutcement
         [ForeignKey("QuarterMasterId")]
         public virtual Person QuarterMaster { get; set; }
         [ForeignKey("ProductId")]
-        public int Product { get; set; }
+        public virtual Product Product { get; set; }
         [ForeignKey("WhereHouseId")]
         public virtual Wherehouse Wherehouse { get; set; }
     }
