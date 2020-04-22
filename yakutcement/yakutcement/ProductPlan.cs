@@ -20,7 +20,7 @@ namespace yakutcement
         public Progress Progress { get; set; }
         public int ProductId { get; set; }
         [ForeignKey("ProductId")]
-        //public virtual Product Product { get; set; }
+        public virtual Product Product { get; set; }
         public int ManagerId { get; set; }
         [ForeignKey("ManagerId")]
         public virtual Person Manager { get; set; }
