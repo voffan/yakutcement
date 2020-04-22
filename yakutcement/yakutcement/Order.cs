@@ -22,7 +22,8 @@ namespace yakutcement
         [ForeignKey("ClientId")]
         public virtual Client Client { get; set; }
         public int ManagerId { get; set; }
-        [ForeignKey("PersonId")]
+        [ForeignKey("ManagerId")]
+        public virtual Person Manager { get; set; }
         public Quantity Unit { get; set; }
     }
 }

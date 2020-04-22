@@ -17,14 +17,13 @@ namespace yakutcement
         public double Value { get; set; }
         public string OperationType { get; set; }
         public int ProductId { get; set; }
-        [ForeignKey("ProductId")]
         public int QuarterMasterId { get; set; }
+        public int WherehouseId {get;set;}
         [ForeignKey("QuarterMasterId")]
         public virtual Person QuarterMaster { get; set; }
+        [ForeignKey("ProductId")]
         public int Product { get; set; }
-        [ForeignKey("Product")]
-        public int Wherehouse { get; set; }
-        [ForeignKey("Wherehouse")]
-        //public virtual Warehouse Warehouse { get; set; }
+        [ForeignKey("WhereHouseId")]
+        public virtual Wherehouse Wherehouse { get; set; }
     }
 }

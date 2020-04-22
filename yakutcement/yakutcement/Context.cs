@@ -13,16 +13,13 @@ namespace yakutcement
         }
 
         public virtual DbSet<Client> Clients { get; set; }
-	public virtual DbSet<Plant> Plant { get; set; }
-	public virtual DbSet<ProductPlan> ProductPlan { get; set; }
-	public virtual DbSet<ProductionLine> ProductionLines { get; set; }
-	public virtual DbSet<SupplyPlan> SupplyPlan{ get; set; }
-	public virtual DbSet<Warehouse> Warehouse { get; set; }
-<<<<<<< HEAD
-    public virtual DbSet<ProductOperation> ProductOperation { get; set; }
-=======
-	public virtual DbSet<ProductPlan> Order { get; set; }
->>>>>>> 6c2e8a59e901f7aad4ed21cf010e791ab4699b5e
+	    public virtual DbSet<Plant> Plants { get; set; }
+	    public virtual DbSet<ProductPlan> ProductPlans { get; set; }
+	    public virtual DbSet<ProductionLine> ProductionLines { get; set; }
+	    public virtual DbSet<SupplyPlan> SupplyPlans { get; set; }
+	    public virtual DbSet<Wherehouse> Warehouses { get; set; }
+        public virtual DbSet<ProductOperation> ProductOperations { get; set; }
+	    public virtual DbSet<Order> Orders { get; set; }
 
 
     }

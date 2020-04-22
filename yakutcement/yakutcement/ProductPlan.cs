@@ -17,7 +17,6 @@ namespace yakutcement
         public int Id { get; set; }
         public DateTime Date { get; set; }
         public double Value { get; set; }
-        [StringLength(200)]
         public Progress Progress { get; set; }
         public int ProductId { get; set; }
         [ForeignKey("ProductId")]

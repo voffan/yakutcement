@@ -11,6 +11,7 @@ namespace yakutcement
     public class Quarry
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
         public int MasterId { get; set; }
         [ForeignKey("MasterId")]

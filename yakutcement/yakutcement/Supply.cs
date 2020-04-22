@@ -20,6 +20,8 @@ namespace yakutcement
 		public string Info { get; set; }
 		public double Price { get; set; }
 		public SupplyType SupplyType { get; set; }
+        public int QuarryId { get; set; }
+        [ForeignKey("QuarryId")]
 		public virtual Quarry Quarry { get; set; }
 		
     }

@@ -11,10 +11,11 @@ namespace yakutcement
     public class SupplyOperation
     {
         [Key]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
         public int Id { get; set; }
-	      public DateTime Date { get; set; }
-	      public double Value { get; set; }
-	      public string OperationType { get; set; }
+	    public DateTime Date { get; set; }
+	    public double Value { get; set; }
+	    public Progress OperationType { get; set; }
         public int SupplyId { get; set; }
         [ForeignKey("SupplyId")]
         public virtual Supply Supply { get; set; }

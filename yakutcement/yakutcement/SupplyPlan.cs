@@ -8,11 +8,11 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace yakutcement
 {
-	public enum Progress { inplan, inwork, done }
+	//public enum Progress { inplan, inwork, done }
 	public class SupplyPlan
 	{
 		[Key]
-        	[DatabaseGenerated(DatabaseGeneratedOption.Identity)]
+        [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
 		public int Id { get; set; }
 		public DateTime Date { get; set; }
 		public double Value { get; set; }
