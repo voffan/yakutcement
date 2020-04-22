@@ -20,6 +20,7 @@ namespace yakutcement
 	    public virtual DbSet<Wherehouse> Warehouses { get; set; }
         public virtual DbSet<ProductOperation> ProductOperations { get; set; }
 	    public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Product> Products { get; set; }
 
 
     }
