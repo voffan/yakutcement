@@ -85,6 +85,7 @@
     <Compile Include="Order.cs" />
     <Compile Include="Person.cs" />
     <Compile Include="Product.cs" />
+    <Compile Include="ProductionLine.cs" />
     <Compile Include="ProductOperation.cs" />
     <Compile Include="ProductPlan.cs" />
     <Compile Include="Plant.cs" />
