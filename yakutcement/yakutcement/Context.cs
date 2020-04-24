@@ -29,6 +29,8 @@ namespace yakutcement
 	    public virtual DbSet<Order> Orders { get; set; }
         public virtual DbSet<Product> Products { get; set; }
         public virtual DbSet<LineSpeed> LineSpeeds { get; set; }
+        public virtual DbSet<OrderProduct> OrderProducts { get; set; }
+        public virtual DbSet<ProductSupply> ProductSupply { get; set; }
 
 
     }

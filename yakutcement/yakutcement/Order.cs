@@ -25,5 +25,7 @@ namespace yakutcement
         [ForeignKey("ManagerId")]
         public virtual Person Manager { get; set; }
         public Quantity Unit { get; set; }
+
+        public ICollection<OrderProduct> OrderProducts { get; set; }
     }
 }
