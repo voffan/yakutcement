@@ -12,6 +12,9 @@ namespace yakutcement
 {
     public partial class Form1 : Form
     {
+        public DBContext DB { get; set; }
+        public Person User { get; set; }
+
         public Form1()
         {
             InitializeComponent();
@@ -30,6 +33,11 @@ namespace yakutcement
         private void toolStripStatusLabel1_Click(object sender, EventArgs e)
         {
 
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            toolStripStatusLabel1.Text = "Пользователь: " + User.LastName + " " + User.FirstName + " " + User.SecondName;
         }
     }
 }

@@ -23,5 +23,8 @@ namespace yakutcement
         public Position Position { get; set; }
         public double Salary { get; set; }
         public Level Level { get; set; }
+        [StringLength(30)]
+        public string Login { get; set; }
+        public string Password { get; set; }
     }
 }
