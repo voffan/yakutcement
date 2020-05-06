@@ -96,6 +96,12 @@
     <Compile Include="Order.cs" />
     <Compile Include="OrderProducts.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="PersonList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonList.Designer.cs">
+      <DependentUpon>PersonList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="ProductionLine.cs" />
     <Compile Include="ProductOperation.cs" />
@@ -121,6 +127,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202004290526394_Second.resx">
       <DependentUpon>202004290526394_Second.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonList.resx">
+      <DependentUpon>PersonList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
