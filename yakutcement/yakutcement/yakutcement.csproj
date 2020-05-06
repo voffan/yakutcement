@@ -84,15 +84,6 @@
     </Compile>
     <Compile Include="IPerson.cs" />
     <Compile Include="LineSpeed.cs" />
-    <Compile Include="Migrations\202004221014482_First-Migration.cs" />
-    <Compile Include="Migrations\202004221014482_First-Migration.designer.cs">
-      <DependentUpon>202004221014482_First-Migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004290526394_Second.cs" />
-    <Compile Include="Migrations\202004290526394_Second.designer.cs">
-      <DependentUpon>202004290526394_Second.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderProducts.cs" />
     <Compile Include="Person.cs" />
@@ -122,15 +113,6 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004221014482_First-Migration.resx">
-      <DependentUpon>202004221014482_First-Migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004290526394_Second.resx">
-      <DependentUpon>202004290526394_Second.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="PersonList.resx">
-      <DependentUpon>PersonList.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -151,6 +133,7 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <Compile Include="Client.cs" />
+    <Compile Include="IEditPerson.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -171,6 +154,9 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Migrations\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
