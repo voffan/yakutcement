@@ -1,16 +1,23 @@
 ﻿<Properties StartupConfiguration="{0F9AE4F7-5827-487F-8868-7150E1710787}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="Person.cs">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Form1.Designer.cs">
     <Files>
-      <File FileName="Person.cs" Line="13" Column="1" />
+      <File FileName="Form1.cs" Line="22" Column="1" />
+      <File FileName="Form1.resx" />
+      <File FileName="Form1.Designer.cs" Line="291" Column="1" />
       <File FileName="Client.cs" />
-      <File FileName="Plant.cs" />
-      <File FileName="Quarry.cs" />
+      <File FileName="yakutcement.csproj" Line="13" Column="8" />
+      <File FileName="IPerson.cs" Line="1" Column="1" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
           <Node name="yakutcement" expanded="True">
-            <Node name="yakutcement" expanded="True" />
+            <Node name="yakutcement" expanded="True">
+              <Node name="Packages" expanded="True" />
+              <Node name="Form1.cs" expanded="True">
+                <Node name="Form1.Designer.cs" selected="True" />
+              </Node>
+            </Node>
           </Node>
         </State>
       </Pad>
