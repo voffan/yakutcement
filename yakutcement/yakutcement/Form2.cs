@@ -34,14 +34,15 @@ namespace yakutcement
             {
                 db = new DBContext();
                 Person p = new Person();
-                p.FirstName = "Иван";
-                p.SecondName = "Иванович";
-                p.LastName = "Иванов";
+                p.Id = 1;
+                p.FirstName = "Антон";
+                p.SecondName = "херович";
+                p.LastName = "херов";
                 p.BirthDate = DateTime.Today;
-                p.Position = Position.Admin;
+                p.Position = Position.PlantMan;
                 p.Salary = 0;
-                p.Level = Level.Admin;
-                p.Login = "iii";
+                p.Level = Level.PlantMan;
+                p.Login = "axx";
                 p.Password = "123";
                 db.Persons.Add(p);
                 db.SaveChanges();
