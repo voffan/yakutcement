@@ -27,9 +27,15 @@ namespace yakutcement
 
         private void PersonList_Load(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = DB.Persons.ToList();
+            /*dataGridView1.DataSource = DB.Persons.ToList();
             dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].HeaderText = "Имя";
+            dataGridView1.Columns[1].HeaderText = "Имя";*/
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            Form addp = new AddPerson();
+            addp.Show();
         }
     }
 }
