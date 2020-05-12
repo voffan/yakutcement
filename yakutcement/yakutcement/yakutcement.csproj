@@ -84,13 +84,9 @@
     </Compile>
     <Compile Include="IPerson.cs" />
     <Compile Include="LineSpeed.cs" />
-    <Compile Include="Migrations\202004221014482_First-Migration.cs" />
-    <Compile Include="Migrations\202004221014482_First-Migration.designer.cs">
-      <DependentUpon>202004221014482_First-Migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004290526394_Second.cs" />
-    <Compile Include="Migrations\202004290526394_Second.designer.cs">
-      <DependentUpon>202004290526394_Second.cs</DependentUpon>
+    <Compile Include="Migrations\202005121146399_first_migration.cs" />
+    <Compile Include="Migrations\202005121146399_first_migration.designer.cs">
+      <DependentUpon>202005121146399_first_migration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
@@ -122,11 +118,8 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004221014482_First-Migration.resx">
-      <DependentUpon>202004221014482_First-Migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004290526394_Second.resx">
-      <DependentUpon>202004290526394_Second.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202005121146399_first_migration.resx">
+      <DependentUpon>202005121146399_first_migration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonList.resx">
       <DependentUpon>PersonList.cs</DependentUpon>
@@ -141,6 +134,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Person.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
