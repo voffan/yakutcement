@@ -8,7 +8,7 @@ namespace yakutcement
 {
     public class IPerson
     {
-        public static void AddPerson(DBContext db, string fName, string sName, string lName, DateTime bDay, Position pos, double salary, Level level, string login, string password)
+        public static void AddPerson(DBContext db, Person user, string fName, string sName, string lName, DateTime bDay, Position pos, double salary, Level level, string login, string password)
         {
 
         }
