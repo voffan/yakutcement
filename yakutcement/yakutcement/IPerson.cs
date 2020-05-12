@@ -12,6 +12,11 @@ namespace yakutcement
         {
 
         }
+        public static void DeletePerson(DBContext db, int id)
+        {
+            var user = (from person in db.Persons where person.Id == id select person).FirstOrDefault<Person>();
+            db.Persons.Remove(user);
+        }
         public static Person Login(DBContext db, string login, string password)
         {
             var user = (from person in db.Persons where person.Login == login select person).FirstOrDefault<Person>();

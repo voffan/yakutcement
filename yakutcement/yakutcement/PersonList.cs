@@ -31,5 +31,14 @@ namespace yakutcement
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Имя";
         }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            DataGridViewSelectedRowCollection selected_rows = dataGridView1.SelectedRows;
+            Person[] selected_persons = new Person[selected_rows.Count];
+            selected_rows.CopyTo(selected_persons, 0);
+            int id = selected_persons[0].Id;
+            IPerson.DeletePerson(DB, id);
+        }
     }
 }
