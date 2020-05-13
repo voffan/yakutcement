@@ -35,9 +35,9 @@ namespace yakutcement
                 db = new DBContext();
                 Person p = new Person();
                 p.Id = 1;
-                p.FirstName = "Антон";
-                p.SecondName = "херович";
-                p.LastName = "херов";
+                p.FirstName = "Иван";
+                p.SecondName = "Иванович";
+                p.LastName = "Иванов";
                 p.BirthDate = DateTime.Today;
                 p.Position = Position.PlantMan;
                 p.Salary = 0;
