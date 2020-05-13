@@ -28,28 +28,28 @@ namespace yakutcement
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {/*
+        {
             DBContext db;
             try
             {
                 db = new DBContext();
                 Person p = new Person();
                 p.Id = 1;
-                p.FirstName = "Антон";
-                p.SecondName = "херович";
-                p.LastName = "херов";
+                p.FirstName = "Стас";
+                p.SecondName = "Капитонович";
+                p.LastName = "Алексеев";
                 p.BirthDate = DateTime.Today;
                 p.Position = Position.PlantMan;
                 p.Salary = 0;
                 p.Level = Level.PlantMan;
-                p.Login = "axx";
-                p.Password = "123";
+                p.Login = "ASK";
+                p.Password = "boss";
                 db.Persons.Add(p);
                 db.SaveChanges();
             }catch(Exception error){
                 // Handle error
                 MessageBox.Show(error.ToString());
-            }*/
+            }
             try
             {
                 Person p = IPerson.Login(mainForm.DB, textBox1.Text, textBox2.Text);
