@@ -84,13 +84,9 @@
     </Compile>
     <Compile Include="IPerson.cs" />
     <Compile Include="LineSpeed.cs" />
-    <Compile Include="Migrations\202004221014482_First-Migration.cs" />
-    <Compile Include="Migrations\202004221014482_First-Migration.designer.cs">
-      <DependentUpon>202004221014482_First-Migration.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202004290526394_Second.cs" />
-    <Compile Include="Migrations\202004290526394_Second.designer.cs">
-      <DependentUpon>202004290526394_Second.cs</DependentUpon>
+    <Compile Include="Migrations\202005130520557_FirstMigration.cs" />
+    <Compile Include="Migrations\202005130520557_FirstMigration.designer.cs">
+      <DependentUpon>202005130520557_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
@@ -116,11 +112,8 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004221014482_First-Migration.resx">
-      <DependentUpon>202004221014482_First-Migration.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202004290526394_Second.resx">
-      <DependentUpon>202004290526394_Second.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202005130520557_FirstMigration.resx">
+      <DependentUpon>202005130520557_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
