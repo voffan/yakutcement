@@ -12,6 +12,8 @@ namespace yakutcement
 {
     public partial class AddPerson : Form
     {
+        public DBContext DB { get; set; }
+        public Person User { get; set; }
         public AddPerson()
         {
             InitializeComponent();
@@ -30,9 +32,5 @@ namespace yakutcement
             Close();
         }
 
-        private void textBox5_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
