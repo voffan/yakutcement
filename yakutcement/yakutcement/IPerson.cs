@@ -16,6 +16,7 @@ namespace yakutcement
         {
             var user = (from person in db.Persons where person.Id == id select person).FirstOrDefault<Person>();
             db.Persons.Remove(user);
+            db.SaveChanges();
         }
         public static Person Login(DBContext db, string login, string password)
         {
