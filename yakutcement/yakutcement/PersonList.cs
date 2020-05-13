@@ -10,7 +10,6 @@ using System.Windows.Forms;
 
 namespace yakutcement
 {
-    /*
     public partial class PersonList : Form
     {
         public DBContext DB { get; set; }
@@ -97,7 +96,9 @@ namespace yakutcement
             {
                 user.Position = position_dict[position];
             }
-            catch (Exception error)
+
+            catch(Exception error)
+
             {
                 MessageBox.Show(error.ToString());
             }
@@ -105,7 +106,9 @@ namespace yakutcement
             {
                 user.Level = level_dict[level];
             }
-            catch (Exception error)
+
+            catch(Exception error)
+
             {
                 MessageBox.Show(error.ToString());
             }
@@ -117,5 +120,7 @@ namespace yakutcement
         {
 
         }
-    }*/
+
+    }
+
 }

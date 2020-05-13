@@ -82,6 +82,12 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="IPerson.cs" />
     <Compile Include="LineSpeed.cs" />
     <Compile Include="Migrations\202005130520557_FirstMigration.cs" />
@@ -92,6 +98,12 @@
     <Compile Include="Order.cs" />
     <Compile Include="OrderProducts.cs" />
     <Compile Include="Person.cs" />
+    <Compile Include="PersonList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PersonList.Designer.cs">
+      <DependentUpon>PersonList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="ProductionLine.cs" />
     <Compile Include="ProductOperation.cs" />
@@ -101,6 +113,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quarry.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Supply.cs" />
     <Compile Include="SupplyOperation.cs" />
     <Compile Include="SupplyPlan.cs" />
@@ -125,6 +138,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Person.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

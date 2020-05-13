@@ -39,5 +39,13 @@ namespace yakutcement
         {
             toolStripStatusLabel1.Text = "Пользователь: " + User.LastName + " " + User.FirstName + " " + User.SecondName;
         }
+
+        private void пользователиToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            PersonList list = new PersonList();
+            list.DB = this.DB;
+            list.User = this.User;
+            list.Show();
+        }
     }
 }
