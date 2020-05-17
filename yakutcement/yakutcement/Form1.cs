@@ -37,15 +37,36 @@ namespace yakutcement
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            /*
             toolStripStatusLabel1.Text = "Пользователь: " + User.LastName + " " + User.FirstName + " " + User.SecondName;
+            */
         }
 
         private void пользователиToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            /*
             PersonList list = new PersonList();
             list.DB = this.DB;
             list.User = this.User;
             list.Show();
+            */
+        }
+
+        private void файлToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void оПриложенииToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var AuxData = "AuxData";
+            System.Windows.Forms.MessageBox.Show(AuxData);
+        }
+
+        private void информацияОЗаводеToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var AuxData = "EditAuxData";
+            System.Windows.Forms.MessageBox.Show(AuxData);
         }
     }
 }

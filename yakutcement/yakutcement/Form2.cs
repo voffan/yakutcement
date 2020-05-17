@@ -29,7 +29,7 @@ namespace yakutcement
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DBContext db;
+            /*DBContext db;
             try
             {
                 db = new DBContext();
@@ -64,6 +64,10 @@ namespace yakutcement
             } catch(Exception error){
                 MessageBox.Show(error.ToString());
             }
+            */
+            this.Hide();
+            mainForm.ShowDialog();
+            Close();
         }
 
         private void Form2_Load(object sender, EventArgs e)

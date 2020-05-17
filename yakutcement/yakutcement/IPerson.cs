@@ -26,6 +26,13 @@ namespace yakutcement
             return null;
         }
 
+        public static bool isadmin(DBContext db, Person user)
+        {
+            if (user.Level.Equals(Level.Admin)) return true;
+            else return false;
+
+        }
+
 
         /*
         public static void EditPerson(Person EditingPerson, DBContext db, string fName, string sName, string lName, DateTime bDay, Position pos, double salary, Level level, string login, string password)
