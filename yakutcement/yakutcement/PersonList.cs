@@ -57,7 +57,7 @@ namespace yakutcement
             selected_cell.ReadOnly = false;
             dataGridView1.BeginEdit(false);
         }
-   
+
         private void button4_Click(object sender, EventArgs e)
         {
             int person_id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
@@ -67,7 +67,7 @@ namespace yakutcement
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            
+
         }
 
         private void dataGridView1_EndEdit(object sender, DataGridViewCellEventArgs e)
@@ -96,7 +96,9 @@ namespace yakutcement
             {
                 user.Position = position_dict[position];
             }
+
             catch(Exception error)
+
             {
                 MessageBox.Show(error.ToString());
             }
@@ -104,7 +106,9 @@ namespace yakutcement
             {
                 user.Level = level_dict[level];
             }
+
             catch(Exception error)
+
             {
                 MessageBox.Show(error.ToString());
             }
@@ -116,5 +120,7 @@ namespace yakutcement
         {
 
         }
+
     }
+
 }
