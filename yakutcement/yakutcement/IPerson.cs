@@ -8,14 +8,15 @@ namespace yakutcement
 {
     public class IPerson
     {
-        public static void AddPerson(DBContext db, string fName, string sName, string lName, DateTime bDay, Position pos, double salary, Level level, string login, string password)
+        public static void AddPerson(DBContext db, Person user, string fName, string sName, string lName, DateTime bDay, Position pos, double salary, Level level, string login, string password)
         {
 
         }
-        public static void DeletePerson(DBContext db, int id)
+        public static void DeletePerson(DBContext db, Person user, int id)
         {
-            var user = (from person in db.Persons where person.Id == id select person).FirstOrDefault<Person>();
-            db.Persons.Remove(user);
+            //check access right
+            var p = (from person in db.Persons where person.Id == id select person).FirstOrDefault<Person>();
+            db.Persons.Remove(p);
             db.SaveChanges();
         }
         public static Person Login(DBContext db, string login, string password)
