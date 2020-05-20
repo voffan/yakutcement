@@ -49,7 +49,7 @@ namespace yakutcement
             }catch(Exception error){
                 // Handle error
                 MessageBox.Show(error.ToString());
-            } */
+            }*/
             try
             {
                 Person p = IPerson.Login(mainForm.DB, textBox1.Text, textBox2.Text);

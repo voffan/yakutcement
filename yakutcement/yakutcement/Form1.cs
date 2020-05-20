@@ -37,7 +37,7 @@ namespace yakutcement
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            toolStripStatusLabel1.Text = "Пользователь: " + User.LastName + " " + User.FirstName + " " + User.SecondName;
+            //toolStripStatusLabel1.Text = "Пользователь: " + User.LastName + " " + User.FirstName + " " + User.SecondName;
         }
 
         private void пользователиToolStripMenuItem_Click(object sender, EventArgs e)

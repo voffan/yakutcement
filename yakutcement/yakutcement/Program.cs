@@ -16,7 +16,7 @@ namespace yakutcement
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PersonList());
+            Application.Run(new AddPerson());
         }
     }
 }

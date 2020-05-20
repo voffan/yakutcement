@@ -8,10 +8,25 @@ namespace yakutcement
 {
     public class IPerson
     {
-        public static void AddPerson(DBContext db, string fName, string sName, string lName, DateTime bDay, Position pos, double salary, Level level, string login, string password)
+        public static bool AddPerson(DBContext db, string fName, string sName, string lName, DateTime bDay, Position pos, double salary, Level level, string login, string password)
         {
-
+            Person p = new Person()
+            {
+                FirstName = fName,
+                SecondName = sName,
+                LastName = lName,
+                BirthDate = bDay,
+                Position = pos,
+                Salary = salary,
+                Level = level,
+                Login = login,
+                Password = password
+            };
+            db.Persons.Add(p);
+            return true;
         }
+
+
         public static Person Login(DBContext db, string login, string password)
         {
             var user = (from person in db.Persons where person.Login == login select person).FirstOrDefault<Person>();

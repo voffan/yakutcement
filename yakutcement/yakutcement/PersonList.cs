@@ -34,8 +34,10 @@ namespace yakutcement
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Form addp = new AddPerson();
-            addp.Show();
+            AddPerson addp = new AddPerson();
+            addp.DB = this.DB;
+            addp.User = this.User;
+            addp.ShowDialog();
         }
     }
 }
