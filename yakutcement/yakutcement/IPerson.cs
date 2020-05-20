@@ -23,6 +23,7 @@ namespace yakutcement
                 Password = password
             };
             db.Persons.Add(p);
+            db.SaveChanges();
             return true;
         }
 
