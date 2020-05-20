@@ -24,36 +24,21 @@ namespace yakutcement
 
         private void AddPerson_Load(object sender, EventArgs e)
         {
-            var combobox1items = new Position[5];
-            int i = 0;
-            foreach (Position position in Enum.GetValues(typeof(Position)))
-            {
-                combobox1items[i] = position;
-            }
-
-            var combobox2items = new Level[6];
-            i = 0;
-            foreach (Level level in Enum.GetValues(typeof(Level)))
-            {
-                combobox2items[i] = level;
-            }
+            //foreach (Position j in (Position[])Enum.GetValues(typeof(Position)))
+            //comboBox1.Items.Add(j);
 
 
+            //foreach (Level j in (Level[])Enum.GetValues(typeof(Level)))
+            //comboBox2.Items.Add(j);
 
-            /*comboBox1.Items.Add("Менеджер");
-            comboBox1.Items.Add("Кладовщик");
-            comboBox1.Items.Add("Системный администратор");
-            comboBox1.Items.Add("Сотрудник завода");
-            comboBox1.Items.Add("Сотрудник карьера");
-
-            comboBox2.Items.Add("Менеджер");
-            comboBox2.Items.Add("Кладовщик");
-            comboBox2.Items.Add("Системный администратор");
-            comboBox2.Items.Add("Сотрудник завода");
-            comboBox2.Items.Add("Сотрудник карьера");
-            comboBox2.Items.Add("Клиент");*/
+            comboBox1.DataSource = Enum.GetValues(typeof(Position));
+            comboBox2.DataSource = Enum.GetValues(typeof(Level));
         }
 
+        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            
+        }
         private void button2_Click(object sender, EventArgs e)
         {
             Close();
@@ -63,26 +48,26 @@ namespace yakutcement
         {
             string fname, sname, lname, login, pass;
             double salary;
-            Position pos;
-            Level level;
+            int pos;
+            int level;
             DateTime bDay;
             fname = textBox1.Text;
             lname = textBox2.Text;
             sname = textBox3.Text;
-            salary = double.Parse(textBox1.Text.Replace(".", ","));
+            salary = double.Parse(textBox4.Text.Replace(".", ","));
             login = textBox5.Text;
             pass = textBox6.Text;
             bDay = dateTimePicker1.Value;
-            /*pos = comboBox1.SelectedItem;
-            level = from Level in Level where Level.index == comboBox2.SelectedIndex select Level;
-            if (IPerson.AddPerson(DB, fname, sname, lname, bDay, pos, salary, level, login, pass))
+            pos = comboBox1.SelectedIndex;
+            level = comboBox2.SelectedIndex;
+            if (IPerson.AddPerson(DB, fname, sname, lname, bDay, (Position)Enum.ToObject(typeof(Position),pos), salary, (Level)Enum.ToObject(typeof(Level), level), login, pass))
             {
                 Close();
             }
             else
             {
                 MessageBox.Show("Error");
-            }*/
+            }
         }
 
     }
