@@ -16,6 +16,7 @@ namespace yakutcement
         public Person User { get; set; }
 
         protected DataGridViewCell selected_cell;
+        protected object temp_selected_value;
 
         protected Dictionary<string, Position> position_dict = new Dictionary<string, Position>();
 
@@ -56,6 +57,7 @@ namespace yakutcement
             selected_cell = dataGridView1.SelectedCells[0];
             selected_cell.ReadOnly = false;
             dataGridView1.BeginEdit(false);
+            temp_selected_value = selected_cell.Value;
         }
    
         private void button4_Click(object sender, EventArgs e)
@@ -85,31 +87,26 @@ namespace yakutcement
             int salary = Convert.ToInt32(selected_row.Cells[6].Value.ToString());
             string level = selected_row.Cells[7].Value.ToString();
 
-            var user = (from person in DB.Persons where person.Id == id select person).FirstOrDefault<Person>();
-
-            user.FirstName = first_name;
-            user.SecondName = second_name;
-            user.LastName = last_name;
-            user.BirthDate = birthday;
-            user.Salary = salary;
             try
             {
-                user.Position = position_dict[position];
+               Position pos = position_dict[position];
+                try
+                {
+                    Level lev = level_dict[level];
+                    if (IPerson.EditPerson(id, User, DB, first_name, second_name, last_name, birthday, pos, salary, lev) is false)
+                    {
+                        selected_cell.Value = temp_selected_value;
+                    }
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.ToString());
+                }
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show(error.ToString());
             }
-            try
-            {
-                user.Level = level_dict[level];
-            }
-            catch(Exception error)
-            {
-                MessageBox.Show(error.ToString());
-            }
-
-            DB.SaveChanges();
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
