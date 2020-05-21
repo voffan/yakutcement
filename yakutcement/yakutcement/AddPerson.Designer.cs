@@ -243,7 +243,7 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
             this.Name = "AddPerson";
-            this.Text = "AddPerson";
+            this.Text = "Добавить пользователя";
             this.Load += new System.EventHandler(this.AddPerson_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
