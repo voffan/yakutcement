@@ -63,6 +63,12 @@ namespace yakutcement
             dataGridView1.Columns[8].Visible = false;
             dataGridView1.Columns[9].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Имя";
+            dataGridView1.Columns[2].HeaderText = "Отчество";
+            dataGridView1.Columns[3].HeaderText = "Фамилия";
+            dataGridView1.Columns[4].HeaderText = "Дата рождения";
+            dataGridView1.Columns[5].HeaderText = "Позиция";
+            dataGridView1.Columns[6].HeaderText = "Зарплата";
+            dataGridView1.Columns[7].HeaderText = "Уровень";
         }
 
         private void button3_Click(object sender, EventArgs e)
