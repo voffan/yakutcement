@@ -44,12 +44,12 @@ namespace yakutcement
 
         private void пользователиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*
+            
             PersonList list = new PersonList();
             list.DB = this.DB;
             list.User = this.User;
             list.Show();
-            */
+            
         }
 
         private void файлToolStripMenuItem_Click(object sender, EventArgs e)
@@ -65,8 +65,17 @@ namespace yakutcement
 
         private void информацияОЗаводеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            var AuxData = "EditAuxData";
-            System.Windows.Forms.MessageBox.Show(AuxData);
+            //var AuxData = "EditAuxData";
+            //System.Windows.Forms.MessageBox.Show(AuxData);
+           
+            FactoryInfo info = new FactoryInfo();
+            info.DB = this.DB;
+            info.User = this.User;
+            /*var g = DB.Plants.Where(k => k.Id == 1).ToList();
+            info.tPlant = g[0];*/
+            var p = (from Plant in DB.Plants where Plant.Id == 1 select Plant).FirstOrDefault<Plant>();
+            info.TPlant = p;
+            info.ShowDialog();
         }
     }
 }

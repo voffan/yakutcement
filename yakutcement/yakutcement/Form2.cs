@@ -35,21 +35,40 @@ namespace yakutcement
                 db = new DBContext();
                 Person p = new Person();
                 p.Id = 1;
-                p.FirstName = "Стас";
-                p.SecondName = "Капитонович";
-                p.LastName = "Алексеев";
+                p.FirstName = "Voffan";
+                p.SecondName = "Voffanovic";
+                p.LastName = "Voffanov";
                 p.BirthDate = DateTime.Today;
                 p.Position = Position.Admin;
                 p.Salary = 0;
-                p.Level = Level.PlantMan;
-                p.Login = "ASK";
-                p.Password = "boss";
+                p.Level = Level.Admin;
+                p.Login = "123";
+                p.Password = "123";
                 db.Persons.Add(p);
                 db.SaveChanges();
             }catch(Exception error){
                 // Handle error
                 MessageBox.Show(error.ToString());
+            }*/
+            /*DBContext db;
+            try
+            {
+                db = new DBContext();
+                Plant p = new Plant();
+                p.Id = 1;
+                p.name = "SS";
+                p.addres = "Zagreb";
+                p.telephone = "+228";
+                p.inn = 1396876;
+                p.kpp = 228228;
+                db.Plants.Add(p);
+                db.SaveChanges();
             }
+            catch (Exception error)
+            {
+                // Handle error
+                MessageBox.Show(error.ToString());
+            }*/
             try
             {
                 Person p = IPerson.Login(mainForm.DB, textBox1.Text, textBox2.Text);
@@ -64,10 +83,6 @@ namespace yakutcement
             } catch(Exception error){
                 MessageBox.Show(error.ToString());
             }
-            */
-            this.Hide();
-            mainForm.ShowDialog();
-            Close();
         }
 
         private void Form2_Load(object sender, EventArgs e)

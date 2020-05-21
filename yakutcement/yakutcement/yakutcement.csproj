@@ -70,6 +70,12 @@
   <ItemGroup>
     <Compile Include="Context.cs" />
     <Compile Include="Factory.cs" />
+    <Compile Include="FactoryInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FactoryInfo.Designer.cs">
+      <DependentUpon>FactoryInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -113,6 +119,9 @@
     <Compile Include="SupplyPlan.cs" />
     <Compile Include="SupplyRemain.cs" />
     <Compile Include="warehouse.cs" />
+    <EmbeddedResource Include="FactoryInfo.resx">
+      <DependentUpon>FactoryInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
