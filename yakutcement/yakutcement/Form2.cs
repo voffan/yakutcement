@@ -42,7 +42,7 @@ namespace yakutcement
                 p.Position = Position.PlantMan;
                 p.Salary = 0;
                 p.Level = Level.PlantMan;
-                p.Login = "axx";
+                p.Login = "iii";
                 p.Password = "123";
                 db.Persons.Add(p);
                 db.SaveChanges();

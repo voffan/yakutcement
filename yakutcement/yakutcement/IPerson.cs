@@ -16,7 +16,7 @@ namespace yakutcement
         {
             if (user.Level == Level.Admin && user.Id != id)
             {
-                System.Windows.Forms.DialogResult result = System.Windows.Forms.MessageBox.Show("Are you really want to delete this person?", "Deleting person", System.Windows.Forms.MessageBoxButtons.YesNo);
+                System.Windows.Forms.DialogResult result = System.Windows.Forms.MessageBox.Show("Вы точно хотите удалить пользвателя?", "Удаление", System.Windows.Forms.MessageBoxButtons.YesNo);
                 if (result == System.Windows.Forms.DialogResult.Yes)
                 {
                     var p = (from person in db.Persons where person.Id == id select person).FirstOrDefault<Person>();
@@ -26,7 +26,7 @@ namespace yakutcement
             }
             else
             {
-                System.Windows.Forms.MessageBox.Show("You don't have permissions to delete persons or yourself!");
+                System.Windows.Forms.MessageBox.Show("У вас нет прав на удаление или вы не можете удалить самого себя!", "Ошибка");
             }
         }
         public static Person Login(DBContext db, string login, string password)

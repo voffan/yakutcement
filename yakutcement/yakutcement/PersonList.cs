@@ -46,8 +46,22 @@ namespace yakutcement
 
         private void PersonList_Load(object sender, EventArgs e)
         {
+            if (User.Level == Level.Admin)
+            {
+                button2.Enabled = true;
+                button3.Enabled = true;
+                button4.Enabled = true;
+            }
+            else
+            {
+                button2.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+            }
             dataGridView1.DataSource = DB.Persons.ToList();
             dataGridView1.Columns[0].Visible = false;
+            dataGridView1.Columns[8].Visible = false;
+            dataGridView1.Columns[9].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Имя";
         }
 
@@ -64,11 +78,11 @@ namespace yakutcement
             {
                 int person_id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
                 IPerson.DeletePerson(DB, User, person_id);
-                PersonList_Load(sender, e);
+                dataGridView1.DataSource = DB.Persons.ToList();
             }
-            catch (Exception error)
+            catch (Exception)
             {
-                MessageBox.Show(error.ToString());
+                MessageBox.Show("Выберите строку", "Ошибка");
             }
         }
 
