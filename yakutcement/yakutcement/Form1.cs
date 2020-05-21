@@ -44,12 +44,12 @@ namespace yakutcement
 
         private void пользователиToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            /*
+            
             PersonList list = new PersonList();
             list.DB = this.DB;
             list.User = this.User;
             list.Show();
-            */
+            
         }
 
         private void файлToolStripMenuItem_Click(object sender, EventArgs e)
