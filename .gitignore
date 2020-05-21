@@ -160,3 +160,4 @@ EntityFramework.6.4.0/
 *.oob
 Migrations/
 *.lock
+.vs/

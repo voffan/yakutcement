@@ -50,25 +50,6 @@ namespace yakutcement
                 // Handle error
                 MessageBox.Show(error.ToString());
             }*/
-            /*DBContext db;
-            try
-            {
-                db = new DBContext();
-                Plant p = new Plant();
-                p.Id = 1;
-                p.name = "SS";
-                p.addres = "Zagreb";
-                p.telephone = "+228";
-                p.inn = 1396876;
-                p.kpp = 228228;
-                db.Plants.Add(p);
-                db.SaveChanges();
-            }
-            catch (Exception error)
-            {
-                // Handle error
-                MessageBox.Show(error.ToString());
-            }*/
             try
             {
                 Person p = IPerson.Login(mainForm.DB, textBox1.Text, textBox2.Text);
