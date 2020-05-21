@@ -14,10 +14,20 @@ namespace yakutcement
         }
         public static void DeletePerson(DBContext db, Person user, int id)
         {
-            //check access right
-            var p = (from person in db.Persons where person.Id == id select person).FirstOrDefault<Person>();
-            db.Persons.Remove(p);
-            db.SaveChanges();
+            if (user.Level == Level.Admin && user.Id != id)
+            {
+                System.Windows.Forms.DialogResult result = System.Windows.Forms.MessageBox.Show("Are you really want to delete this person?", "Deleting person", System.Windows.Forms.MessageBoxButtons.YesNo);
+                if (result == System.Windows.Forms.DialogResult.Yes)
+                {
+                    var p = (from person in db.Persons where person.Id == id select person).FirstOrDefault<Person>();
+                    db.Persons.Remove(p);
+                    db.SaveChanges();
+                }
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("You don't have permissions to delete persons or yourself!");
+            }
         }
         public static Person Login(DBContext db, string login, string password)
         {

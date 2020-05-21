@@ -60,9 +60,16 @@ namespace yakutcement
    
         private void button4_Click(object sender, EventArgs e)
         {
-            int person_id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-            IPerson.DeletePerson(DB, User, person_id);
-            PersonList_Load(sender, e);
+            try
+            {
+                int person_id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                IPerson.DeletePerson(DB, User, person_id);
+                PersonList_Load(sender, e);
+            }
+            catch (Exception error)
+            {
+                MessageBox.Show(error.ToString());
+            }
         }
 
         private void dataGridView1_CellClick(object sender, DataGridViewCellEventArgs e)
