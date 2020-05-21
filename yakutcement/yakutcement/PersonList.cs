@@ -27,17 +27,45 @@ namespace yakutcement
 
         private void PersonList_Load(object sender, EventArgs e)
         {
-            /*dataGridView1.DataSource = DB.Persons.ToList();
+            if (User.Level == Level.Admin)
+            {
+                button2.Enabled = true;
+                button3.Enabled = true;
+                button4.Enabled = true;
+            }
+            else
+            {
+                button2.Enabled = false;
+                button3.Enabled = false;
+                button4.Enabled = false;
+            }
+            dataGridView1.DataSource = DB.Persons.ToList();
             dataGridView1.Columns[0].Visible = false;
-            dataGridView1.Columns[1].HeaderText = "Имя";*/
+            dataGridView1.Columns[8].Visible = false;
+            dataGridView1.Columns[9].Visible = false;
+            dataGridView1.Columns[1].HeaderText = "Имя";
+            dataGridView1.Columns[2].HeaderText = "Фамилия";
+            dataGridView1.Columns[3].HeaderText = "Отчество";
+            dataGridView1.Columns[4].HeaderText = "День рождения";
+            dataGridView1.Columns[5].HeaderText = "Позиция";
+            dataGridView1.Columns[6].HeaderText = "Зарплата (USD)";
+            dataGridView1.Columns[7].HeaderText = "Уровень доступа";
         }
 
         private void button2_Click(object sender, EventArgs e)
         {
-            AddPerson addp = new AddPerson();
-            addp.DB = this.DB;
-            addp.User = this.User;
-            addp.ShowDialog();
+            if (User.Level == Level.Admin)
+            {
+                AddPerson addp = new AddPerson();
+                addp.DB = this.DB;
+                addp.User = this.User;
+                addp.ShowDialog();
+                dataGridView1.DataSource = DB.Persons.ToList();
+            }
+            else 
+            {
+                MessageBox.Show("You dont have permission");
+            }
         }
     }
 }
