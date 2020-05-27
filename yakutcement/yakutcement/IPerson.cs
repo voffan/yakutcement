@@ -12,21 +12,18 @@ namespace yakutcement
         {
 
         }
-        public static void DeletePerson(DBContext db, Person user, int id)
+        public static bool DeletePerson(DBContext db, Person user, int id)
         {
             if (user.Level == Level.Admin && user.Id != id)
             {
-                System.Windows.Forms.DialogResult result = System.Windows.Forms.MessageBox.Show("Вы точно хотите удалить пользвателя?", "Удаление", System.Windows.Forms.MessageBoxButtons.YesNo);
-                if (result == System.Windows.Forms.DialogResult.Yes)
-                {
-                    var p = (from person in db.Persons where person.Id == id select person).FirstOrDefault<Person>();
-                    db.Persons.Remove(p);
-                    db.SaveChanges();
-                }
+                var p = (from person in db.Persons where person.Id == id select person).FirstOrDefault<Person>();
+                db.Persons.Remove(p);
+                db.SaveChanges();
+                return true;
             }
             else
             {
-                System.Windows.Forms.MessageBox.Show("У вас нет прав на удаление или вы не можете удалить самого себя!", "Ошибка");
+                return false;
             }
         }
         public static Person Login(DBContext db, string login, string password)

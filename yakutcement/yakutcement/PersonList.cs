@@ -80,15 +80,25 @@ namespace yakutcement
    
         private void button4_Click(object sender, EventArgs e)
         {
-            try
+            System.Windows.Forms.DialogResult result = System.Windows.Forms.MessageBox.Show("Вы точно хотите удалить пользвателя?", "Удаление", System.Windows.Forms.MessageBoxButtons.YesNo);
+            if (result == System.Windows.Forms.DialogResult.Yes)
             {
-                int person_id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
-                IPerson.DeletePerson(DB, User, person_id);
-                dataGridView1.DataSource = DB.Persons.ToList();
-            }
-            catch (Exception)
-            {
-                MessageBox.Show("Выберите строку", "Ошибка");
+                try
+                {
+                    int person_id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                    if (IPerson.DeletePerson(DB, User, person_id))
+                    {
+                        dataGridView1.DataSource = DB.Persons.ToList();
+                    }
+                    else
+                    {
+                        System.Windows.Forms.MessageBox.Show("У вас нет прав на удаление или вы не можете удалить самого себя!", "Ошибка");
+                    }
+                }
+                catch (Exception)
+                {
+                    MessageBox.Show("Выберите строку", "Ошибка");
+                }
             }
         }
 
