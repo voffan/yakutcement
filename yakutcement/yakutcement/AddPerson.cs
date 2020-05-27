@@ -24,16 +24,8 @@ namespace yakutcement
 
         private void AddPerson_Load(object sender, EventArgs e)
         {
-            //foreach (Position j in (Position[])Enum.GetValues(typeof(Position)))
-            //comboBox1.Items.Add(j);
-
-
-            //foreach (Level j in (Level[])Enum.GetValues(typeof(Level)))
-            //comboBox2.Items.Add(j);
-
             comboBox1.DataSource = Enum.GetValues(typeof(Position));
             comboBox2.DataSource = Enum.GetValues(typeof(Level));
-
         }
 
         private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
@@ -68,7 +60,7 @@ namespace yakutcement
             }
             catch (Exception error)
             {
-                    MessageBox.Show(error.Message);
+                MessageBox.Show(error.ToString());
             }
         }
 

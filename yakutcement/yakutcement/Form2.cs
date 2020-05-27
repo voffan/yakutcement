@@ -31,6 +31,12 @@ namespace yakutcement
         {
             /*
             DBContext db;
+            db = new DBContext();
+            db.Persons.Remove((from Person in db.Persons where Person.Id == 7 select Person).FirstOrDefault<Person>());
+            db.SaveChanges();
+            */
+             /*
+            DBContext db;
             try
             {
                 db = new DBContext();
