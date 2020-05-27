@@ -174,7 +174,6 @@ namespace yakutcement
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
->>>>>>> b9268b4416be922c14dc537c05144f060aed2df0
         }
     }
 }
