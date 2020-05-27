@@ -49,6 +49,10 @@ namespace yakutcement
             dataGridView1.DataSource = DB.Persons.ToList();
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Имя";
+            if (User.Level == Level.Admin)
+            {
+                //Add password column
+            }
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -85,16 +89,11 @@ namespace yakutcement
             int salary = Convert.ToInt32(selected_row.Cells[6].Value.ToString());
             string level = selected_row.Cells[7].Value.ToString();
 
-            var user = (from person in DB.Persons where person.Id == id select person).FirstOrDefault<Person>();
-
-            user.FirstName = first_name;
-            user.SecondName = second_name;
-            user.LastName = last_name;
-            user.BirthDate = birthday;
-            user.Salary = salary;
+            Position pos = yakutcement.Position.Manager;
+            Level person_level = Level.Manager;
             try
             {
-                user.Position = position_dict[position];
+                pos = position_dict[position];
             }
             catch(Exception error)
             {
@@ -102,14 +101,14 @@ namespace yakutcement
             }
             try
             {
-                user.Level = level_dict[level];
+                person_level = level_dict[level];
             }
             catch(Exception error)
             {
                 MessageBox.Show(error.ToString());
             }
 
-            DB.SaveChanges();
+            IPerson.EditPerson(DB, User, id, first_name, second_name,last_name,birthday,pos,salary, person_level,"", "");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
