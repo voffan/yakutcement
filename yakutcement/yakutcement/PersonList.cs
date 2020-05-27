@@ -97,9 +97,11 @@ namespace yakutcement
                 try
                 {
                     Level lev = level_dict[level];
-                    if (IPerson.EditPerson(id, User, DB, first_name, second_name, last_name, birthday, pos, salary, lev))
+                    switch(IPerson.EditPerson(id, User, DB, first_name, second_name, last_name, birthday, pos, salary, lev))
                     {
-                        selected_cell.Value = temp_selected_value;
+                        case 0: selected_cell.Value = temp_selected_value; break;
+                        case 1: System.Windows.Forms.MessageBox.Show("У вас нет прав на изменение позиции, зарплаты и уровня!"); break;
+                        case 2: System.Windows.Forms.MessageBox.Show("У вас нет прав"); break;
                     }
                 }
                 catch (Exception error)

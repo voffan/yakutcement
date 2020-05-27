@@ -38,7 +38,7 @@ namespace yakutcement
         }
 
 
-        public static bool EditPerson(int EditingPerson_id, Person user, DBContext db, string fName, string sName, string lName, DateTime bDay, Position pos, double salary, Level level)
+        public static int EditPerson(int EditingPerson_id, Person user, DBContext db, string fName, string sName, string lName, DateTime bDay, Position pos, double salary, Level level)
         {
             var EditingPerson =(from person in db.Persons where person.Id == EditingPerson_id select person).FirstOrDefault<Person>();
             if ((EditingPerson_Equals_EditorPerson_Check(user, EditingPerson)) | (Admin_Check(user, EditingPerson)))
@@ -55,24 +55,15 @@ namespace yakutcement
                 }
                 else
                 {
-                    System.Windows.Forms.MessageBox.Show("У вас нет прав на изменение позиции, зарплаты и уровня!");
-                    return false;
+                    return 1;
                 }
-                try
-                {
-                    db.SaveChanges();
-                }
-                catch (Exception e)
-                {
-                    System.Windows.Forms.MessageBox.Show(Convert.ToString(e));
-                }
+                db.SaveChanges();
             }
             else
             {
-                System.Windows.Forms.MessageBox.Show("У вас нет прав");
-                return false;
+                return 2;
             }
-            return true;
+            return 0;
         }   
     }
 }
