@@ -28,9 +28,7 @@ namespace yakutcement
 
         public static bool isadmin(DBContext db, Person user)
         {
-            if (user.Level.Equals(Level.Admin)) return true;
-            else return false;
-
+            return user.Level.Equals(Level.Admin);
         }
 
 
