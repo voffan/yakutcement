@@ -60,13 +60,14 @@ namespace yakutcement
             bDay = dateTimePicker1.Value;
             pos = comboBox1.SelectedIndex;
             level = comboBox2.SelectedIndex;
-            if (IPerson.AddPerson(DB, fname, sname, lname, bDay, (Position)Enum.ToObject(typeof(Position),pos), salary, (Level)Enum.ToObject(typeof(Level), level), login, pass))
+            try
             {
+                IPerson.AddPerson(DB, fname, sname, lname, bDay, (Position)Enum.ToObject(typeof(Position),pos), salary, (Level)Enum.ToObject(typeof(Level), level), login, pass);
                 Close();
             }
-            else
+            catch(Exception error)
             {
-                MessageBox.Show("Error");
+                MessageBox.Show(error.Message);
             }
         }
 
