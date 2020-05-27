@@ -25,21 +25,54 @@ namespace yakutcement
             return null;
         }
 
-        // для реализации редактирования в отдельном окне 
-
-        public static void EditPerson(DBContext db, Person user, int id, string fName, string sName, string lName, DateTime bDay, Position pos, double salary, Level level, string login, string password)
+        public static bool EditingPerson_Equals_EditorPerson_Check(Person user, Person EditingPerson)
         {
-            var EditingPerson = (from person in db.Persons where person.Id == id select person).FirstOrDefault<Person>();
-            EditingPerson.FirstName = fName;
-            EditingPerson.SecondName = sName;
-            EditingPerson.LastName = lName;
-            EditingPerson.BirthDate = bDay;
-            EditingPerson.Position = pos;
-            EditingPerson.Salary = salary;
-            EditingPerson.Level = level;
-            //EditingPerson.Password = password;
+            if (user == EditingPerson) return true;
+            else return false;
+        }
 
-            db.SaveChanges();
+        public static bool Admin_Check(Person user, Person EditingPerson)
+        {
+            if (user.Level == Level.Admin) return true;
+            else return false;
+        }
+
+
+        public static bool EditPerson(int EditingPerson_id, Person user, DBContext db, string fName, string sName, string lName, DateTime bDay, Position pos, double salary, Level level)
+        {
+            var EditingPerson =(from person in db.Persons where person.Id == EditingPerson_id select person).FirstOrDefault<Person>();
+            if ((EditingPerson_Equals_EditorPerson_Check(user, EditingPerson)) | (Admin_Check(user, EditingPerson)))
+            {
+                EditingPerson.FirstName = fName;
+                EditingPerson.SecondName = sName;
+                EditingPerson.LastName = lName;
+                EditingPerson.BirthDate = bDay;
+                if (Admin_Check(user, EditingPerson))
+                {
+                    EditingPerson.Position = pos;
+                    EditingPerson.Salary = salary;
+                    EditingPerson.Level = level;
+                }
+                else
+                {
+                    System.Windows.Forms.MessageBox.Show("У вас нет прав на изменение позиции, зарплаты и уровня!");
+                    return false;
+                }
+                try
+                {
+                    db.SaveChanges();
+                }
+                catch (Exception e)
+                {
+                    System.Windows.Forms.MessageBox.Show(Convert.ToString(e));
+                }
+            }
+            else
+            {
+                System.Windows.Forms.MessageBox.Show("У вас нет прав");
+                return false;
+            }
+            return true;
         }   
     }
 }

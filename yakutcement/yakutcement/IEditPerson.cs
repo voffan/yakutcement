@@ -31,13 +31,13 @@ namespace yakutcement
         public static void EditPerson(DBContext db, string fName, string sName, string lName, DateTime bDay, Position pos, double salary, Level level, string login, string password)
         {
             // I cant do form because i dont have VS on Windows
-
-            while EditPersonForm_TextBox1.Text != ""
+            /*
+            while (EditPersonForm_TextBox1.Text != "")
             {
                 var EditingPerson = FindPerson(db, login);
 
             }
-            
+            */
             
         }
 

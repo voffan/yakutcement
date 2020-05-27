@@ -16,6 +16,7 @@ namespace yakutcement
         public Person User { get; set; }
 
         protected DataGridViewCell selected_cell;
+        protected object temp_selected_value;
 
         protected Dictionary<string, Position> position_dict = new Dictionary<string, Position>();
 
@@ -60,6 +61,7 @@ namespace yakutcement
             selected_cell = dataGridView1.SelectedCells[0];
             selected_cell.ReadOnly = false;
             dataGridView1.BeginEdit(false);
+            temp_selected_value = selected_cell.Value;
         }
    
         private void button4_Click(object sender, EventArgs e)
@@ -89,26 +91,26 @@ namespace yakutcement
             int salary = Convert.ToInt32(selected_row.Cells[6].Value.ToString());
             string level = selected_row.Cells[7].Value.ToString();
 
-            Position pos = yakutcement.Position.Manager;
-            Level person_level = Level.Manager;
             try
             {
-                pos = position_dict[position];
+                Position pos = position_dict[position];
+                try
+                {
+                    Level lev = level_dict[level];
+                    if (IPerson.EditPerson(id, User, DB, first_name, second_name, last_name, birthday, pos, salary, lev))
+                    {
+                        selected_cell.Value = temp_selected_value;
+                    }
+                }
+                catch (Exception error)
+                {
+                    MessageBox.Show(error.ToString());
+                }
             }
-            catch(Exception error)
+            catch (Exception error)
             {
                 MessageBox.Show(error.ToString());
             }
-            try
-            {
-                person_level = level_dict[level];
-            }
-            catch(Exception error)
-            {
-                MessageBox.Show(error.ToString());
-            }
-
-            IPerson.EditPerson(DB, User, id, first_name, second_name,last_name,birthday,pos,salary, person_level,"", "");
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
