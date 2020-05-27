@@ -88,11 +88,23 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="Form3.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Form3.Designer.cs">
+      <DependentUpon>Form3.cs</DependentUpon>
+    </Compile>
     <Compile Include="IPerson.cs" />
     <Compile Include="LineSpeed.cs" />
+<<<<<<< HEAD
     <Compile Include="Migrations\202005210757133_BazaDannih.cs" />
     <Compile Include="Migrations\202005210757133_BazaDannih.designer.cs">
       <DependentUpon>202005210757133_BazaDannih.cs</DependentUpon>
+=======
+    <Compile Include="Migrations\202005121424535_first.cs" />
+    <Compile Include="Migrations\202005121424535_first.designer.cs">
+      <DependentUpon>202005121424535_first.cs</DependentUpon>
+>>>>>>> b9268b4416be922c14dc537c05144f060aed2df0
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
@@ -113,6 +125,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Quarry.cs" />
+    <Compile Include="Settings.cs" />
     <Compile Include="Supply.cs" />
     <Compile Include="SupplyOperation.cs" />
     <Compile Include="SupplyPlan.cs" />
@@ -127,8 +140,13 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
+<<<<<<< HEAD
     <EmbeddedResource Include="Migrations\202005210757133_BazaDannih.resx">
       <DependentUpon>202005210757133_BazaDannih.cs</DependentUpon>
+=======
+    <EmbeddedResource Include="Migrations\202005121424535_first.resx">
+      <DependentUpon>202005121424535_first.cs</DependentUpon>
+>>>>>>> b9268b4416be922c14dc537c05144f060aed2df0
     </EmbeddedResource>
     <EmbeddedResource Include="PersonList.resx">
       <DependentUpon>PersonList.cs</DependentUpon>
@@ -143,6 +161,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Person.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

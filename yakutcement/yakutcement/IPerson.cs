@@ -28,6 +28,21 @@ namespace yakutcement
         }
 
 
+        public static bool DeletePerson(DBContext db, Person user, int id)
+        {
+            if (user.Level == Level.Admin && user.Id != id)
+            {
+                var p = (from person in db.Persons where person.Id == id select person).FirstOrDefault<Person>();
+                db.Persons.Remove(p);
+                db.SaveChanges();
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+        }
+		
         public static Person Login(DBContext db, string login, string password)
         {
             var user = (from person in db.Persons where person.Login == login select person).FirstOrDefault<Person>();

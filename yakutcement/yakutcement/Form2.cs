@@ -28,8 +28,7 @@ namespace yakutcement
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
-            /*
+        {/*
             DBContext db;
             db = new DBContext();
             db.Persons.Remove((from Person in db.Persons where Person.Id == 7 select Person).FirstOrDefault<Person>());
@@ -41,13 +40,14 @@ namespace yakutcement
             {
                 db = new DBContext();
                 Person p = new Person();
+                p.Id = 1;
                 p.FirstName = "Иван";
                 p.SecondName = "Иванович";
                 p.LastName = "Иванов";
                 p.BirthDate = DateTime.Today;
-                p.Position = Position.Admin;
+                p.Position = Position.PlantMan;
                 p.Salary = 0;
-                p.Level = Level.Admin;
+                p.Level = Level.PlantMan;
                 p.Login = "iii";
                 p.Password = "123";
                 db.Persons.Add(p);
