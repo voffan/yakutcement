@@ -91,8 +91,12 @@
     <Compile Include="IPerson.cs" />
     <Compile Include="LineSpeed.cs" />
     <Compile Include="Migrations\202005211145552_First.cs" />
-    <Compile Include="Migrations\202005211145552_First.designer.cs">
+    <None Include="Migrations\202005211145552_First.designer.cs">
       <DependentUpon>202005211145552_First.cs</DependentUpon>
+    </None>
+    <Compile Include="Migrations\202005211730444_qwerty.cs" />
+    <Compile Include="Migrations\202005211730444_qwerty.designer.cs">
+      <DependentUpon>202005211730444_qwerty.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
@@ -128,8 +132,11 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005211145552_First.resx">
+    <None Include="Migrations\202005211145552_First.resx">
       <DependentUpon>202005211145552_First.cs</DependentUpon>
+    </None>
+    <EmbeddedResource Include="Migrations\202005211730444_qwerty.resx">
+      <DependentUpon>202005211730444_qwerty.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonList.resx">
       <DependentUpon>PersonList.cs</DependentUpon>
