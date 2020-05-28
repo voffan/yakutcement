@@ -29,8 +29,8 @@ namespace yakutcement
 
         private void button2_Click(object sender, EventArgs e)
         {
-            DBContext db;
             /*
+            DBContext db;
             try
             {
                 db = new DBContext();

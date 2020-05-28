@@ -73,9 +73,12 @@ namespace yakutcement
             info.User = this.User;
             /*var g = DB.Plants.Where(k => k.Id == 1).ToList();
             info.tPlant = g[0];*/
-            var p = (from Plant in DB.Plants where Plant.Id == 1 select Plant).FirstOrDefault<Plant>();
-            info.TPlant = p;
-            info.ShowDialog();
+            if (IFactory.factoryexist(DB))
+            {
+                var p = (from Plant in DB.Plants where Plant.Id == 1 select Plant).FirstOrDefault<Plant>();
+                info.TPlant = p;
+                info.ShowDialog();
+            }
         }
     }
 }

@@ -6,7 +6,17 @@ using System.Threading.Tasks;
 
 namespace yakutcement
 {
-    class Class1
+    class IFactory
     {
+        public static bool factoryexist(DBContext db)
+        {
+            if (db.Factories.Count()>0) return true;
+            else return false;
+        }
+
+        public static void AddFactory()
+        {
+
+        }
     }
 }
