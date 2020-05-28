@@ -90,13 +90,9 @@
     </Compile>
     <Compile Include="IPerson.cs" />
     <Compile Include="LineSpeed.cs" />
-    <Compile Include="Migrations\202005211145552_First.cs" />
-    <None Include="Migrations\202005211145552_First.designer.cs">
-      <DependentUpon>202005211145552_First.cs</DependentUpon>
-    </None>
-    <Compile Include="Migrations\202005211730444_qwerty.cs" />
-    <Compile Include="Migrations\202005211730444_qwerty.designer.cs">
-      <DependentUpon>202005211730444_qwerty.cs</DependentUpon>
+    <Compile Include="Migrations\202005281956063_FirstMigration.cs" />
+    <Compile Include="Migrations\202005281956063_FirstMigration.designer.cs">
+      <DependentUpon>202005281956063_FirstMigration.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
@@ -132,11 +128,8 @@
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="Migrations\202005211145552_First.resx">
-      <DependentUpon>202005211145552_First.cs</DependentUpon>
-    </None>
-    <EmbeddedResource Include="Migrations\202005211730444_qwerty.resx">
-      <DependentUpon>202005211730444_qwerty.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202005281956063_FirstMigration.resx">
+      <DependentUpon>202005281956063_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonList.resx">
       <DependentUpon>PersonList.cs</DependentUpon>
