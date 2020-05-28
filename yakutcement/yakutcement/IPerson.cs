@@ -31,27 +31,5 @@ namespace yakutcement
             return user.Level.Equals(Level.Admin);
         }
 
-
-        /*
-        public static void EditPerson(Person EditingPerson, DBContext db, string fName, string sName, string lName, DateTime bDay, Position pos, double salary, Level level, string login, string password)
-        {
-            EditingPerson.FirstName = fName;
-            EditingPerson.SecondName = sName;
-            EditingPerson.LastName = lName;
-            EditingPerson.BirthDate = bDay;
-            EditingPerson.Position = pos;
-            EditingPerson.Salary = salary;
-            EditingPerson.Level = level;
-            try
-            {
-                db.SubmitChanges();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e);
-                // Provide for exceptions.
-            }
-        } 
-        */
     }
 }

@@ -28,7 +28,7 @@ namespace yakutcement
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {
+        {   
             /*
             DBContext db;
             try
@@ -50,7 +50,8 @@ namespace yakutcement
             }catch(Exception error){
                 // Handle error
                 MessageBox.Show(error.ToString());
-            }*/
+            }
+            */
             try
             {
                 Person p = IPerson.Login(mainForm.DB, textBox1.Text, textBox2.Text);
