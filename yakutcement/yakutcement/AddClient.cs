@@ -13,7 +13,7 @@ namespace yakutcement
     public partial class AddClient : Form
     {
         public DBContext DB { get; set; }
-        public Person User { get; set; }
+        public Client User { get; set; }
         public AddClient()
         {
             InitializeComponent();
