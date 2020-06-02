@@ -47,5 +47,13 @@ namespace yakutcement
             list.User = this.User;
             list.Show();
         }
+
+        private void товарыToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ProductList list = new ProductList();
+            list.DB = this.DB;
+            list.User = this.User;
+            list.Show();
+        }
     }
 }
