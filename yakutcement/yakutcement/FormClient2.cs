@@ -10,11 +10,11 @@ using System.Windows.Forms;
 
 namespace yakutcement
 {
-    public partial class Form2 : Form
+    public partial class FormClient2 : Form
     {
-        private Form4 mainForm;
+        private FormClient1 mainForm;
 
-        public Form2()
+        public FormClient2()
         {
             InitializeComponent();
             MaximizeBox = false;
@@ -33,18 +33,16 @@ namespace yakutcement
             try
             {
                 db = new DBContext();
-                Person p = new Person();
-                p.Id = 1;
-                p.FirstName = "Стас";
-                p.SecondName = "Капитонович";
-                p.LastName = "Алексеев";
-                p.BirthDate = DateTime.Today;
-                p.Position = Position.PlantMan;
-                p.Salary = 0;
-                p.Level = Level.PlantMan;
-                p.Login = "ASK";
-                p.Password = "boss";
-                db.Persons.Add(p);
+                Client c = new Client();
+                c.Id = 1;
+                c.Name = "ДСК";
+                c.Address = "ш. Новопокровский тракт, 10";
+                c.Telephone = "8(411)233-13-28";
+                c.Email = "DSK@gmail.com";
+                c.Inn = "644909589022";
+                c.Login = "Yee";
+                c.Password = "089";
+                db.Clients.Add(c);
                 db.SaveChanges();
             }catch(Exception error){
                 // Handle error
@@ -52,12 +50,12 @@ namespace yakutcement
             }
             try
             {
-                Person p = IPerson.Login(mainForm.DB, textBox1.Text, textBox2.Text);
-                if (p == null) MessageBox.Show("Пароль или логин не верный!!!");
+                Client c = IClient.Login(mainForm.DB, textBox1.Text, textBox2.Text);
+                if (c == null) MessageBox.Show("Пароль или логин не верный!!!");
                 else
                 {
                     this.Hide();
-                    mainForm.User = p;
+                    mainForm.User = c;
                     mainForm.ShowDialog();
                     Close();
                 }
@@ -66,9 +64,9 @@ namespace yakutcement
             }
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void FormClient2_Load(object sender, EventArgs e)
         {
-            mainForm = new Form4();
+            mainForm = new FormClient1();
             mainForm.DB = new DBContext();
         }
     }
