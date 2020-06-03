@@ -65,12 +65,10 @@ namespace yakutcement
 
         private void button3_Click(object sender, EventArgs e)
         {
-            TPlant.name = textBox1.Text;
-            TPlant.addres = textBox2.Text;
-            TPlant.telephone = textBox3.Text;
-            TPlant.inn = Convert.ToInt32(textBox4.Text);
-            TPlant.kpp = Convert.ToInt32(textBox5.Text);
-            DB.SaveChanges();
+            
+            try{
+                IFactory.SaveFactory(textBox1.Text, textBox2.Text,...);
+            }
         }
 
         private void button2_Click(object sender, EventArgs e)
