@@ -65,15 +65,20 @@ namespace yakutcement
 
         private void информацияОЗаводеToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            //var AuxData = "EditAuxData";
-            //System.Windows.Forms.MessageBox.Show(AuxData);
-           
             FactoryInfo info = new FactoryInfo();
             info.DB = this.DB;
             info.User = this.User;
             /*var g = DB.Plants.Where(k => k.Id == 1).ToList();
             info.tPlant = g[0];*/
-            var p = (from Plant in DB.Plants where Plant.Id == 1 select Plant).FirstOrDefault<Plant>();
+            Plant p = null;
+            if (IPlant.plantexist(DB))
+            {
+                p = (from Plant in DB.Plants where Plant.Id == 1 select Plant).FirstOrDefault<Plant>();
+            }
+            else
+            {
+                p = IPlant.AddDefaultPlant(DB);
+            }
             info.TPlant = p;
             info.ShowDialog();
         }

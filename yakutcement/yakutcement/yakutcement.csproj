@@ -68,14 +68,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Context.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="FactoryInfo.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="FactoryInfo.Designer.cs">
-      <DependentUpon>FactoryInfo.cs</DependentUpon>
-    </Compile>
+    <Compile Include="FactoryInfo.Designer.cs" />
+    <Compile Include="IProductionLine.cs" />
+    <Compile Include="Context.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,9 +88,14 @@
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
     <Compile Include="IFactory.cs" />
+    <Compile Include="IPlant.cs" />
     <Compile Include="IPerson.cs" />
     <Compile Include="IWareHause.cs" />
     <Compile Include="LineSpeed.cs" />
+    <Compile Include="Migrations\202005281956063_FirstMigration.cs" />
+    <Compile Include="Migrations\202005281956063_FirstMigration.designer.cs">
+      <DependentUpon>202005281956063_FirstMigration.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderProducts.cs" />
@@ -129,14 +133,15 @@
       <DependentUpon>WareHauseList.cs</DependentUpon>
     </Compile>
     <Compile Include="warehouse.cs" />
-    <EmbeddedResource Include="FactoryInfo.resx">
-      <DependentUpon>FactoryInfo.cs</DependentUpon>
-    </EmbeddedResource>
+    <EmbeddedResource Include="FactoryInfo.resx" />
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202005281956063_FirstMigration.resx">
+      <DependentUpon>202005281956063_FirstMigration.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonList.resx">
       <DependentUpon>PersonList.cs</DependentUpon>

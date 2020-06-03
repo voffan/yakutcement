@@ -23,27 +23,20 @@ namespace yakutcement
 
         private void FactoryInfo_Load(object sender, EventArgs e)
         {
-
-            if (User.Level == Level.Admin)
-            {
-
-            }
-            else
-            {
-                textBox1.Enabled = false;
-                textBox2.Enabled = false;
-                textBox3.Enabled = false;
-                textBox4.Enabled = false;
-                textBox5.Enabled = false;
-                button3.Enabled = false;
-            }
+            /*
+            textBox1.Enabled = false;
+            textBox2.Enabled = false;
+            textBox3.Enabled = false;
+            textBox4.Enabled = false;
+            textBox5.Enabled = false;
+            button3.Enabled = false;
+            */
 
             textBox1.Text = TPlant.name;
             textBox2.Text = TPlant.addres;
             textBox3.Text = TPlant.telephone;
             textBox4.Text = TPlant.inn.ToString();
             textBox5.Text = TPlant.kpp.ToString();
-
         }
 
         private void label1_Click(object sender, EventArgs e)

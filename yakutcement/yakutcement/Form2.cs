@@ -28,7 +28,8 @@ namespace yakutcement
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {/*
+        {   
+            /*
             DBContext db;
             try
             {
@@ -49,7 +50,8 @@ namespace yakutcement
             }catch(Exception error){
                 // Handle error
                 MessageBox.Show(error.ToString());
-            }*/
+            }
+            */
             try
             {
                 Person p = IPerson.Login(mainForm.DB, textBox1.Text, textBox2.Text);
@@ -61,14 +63,15 @@ namespace yakutcement
                     mainForm.ShowDialog();
                     Close();
                 }
-            } catch(Exception error){
+            }
+            catch (Exception error)
+            {
                 MessageBox.Show(error.ToString());
             }
             this.Hide();
             mainForm.ShowDialog();
             Close();
         }
-
         private void Form2_Load(object sender, EventArgs e)
         {
             mainForm = new Form1();
