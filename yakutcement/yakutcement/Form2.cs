@@ -12,7 +12,7 @@ namespace yakutcement
 {
     public partial class Form2 : Form
     {
-        private Form1 mainForm;
+        private Form4 mainForm;
 
         public Form2()
         {
@@ -68,7 +68,7 @@ namespace yakutcement
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            mainForm = new Form1();
+            mainForm = new Form4();
             mainForm.DB = new DBContext();
         }
     }

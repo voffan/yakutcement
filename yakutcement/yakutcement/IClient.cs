@@ -8,14 +8,14 @@ namespace yakutcement
 {
     public class IClient
     {
-        public static bool AddClient(DBContext db, string Name, string Addres, string Email, string Telephone, string login, string password)
+        public static bool AddClient(DBContext db, string Name, string Address, string Email, string Telephone, string login, string password)
         {
             Client c = new Client()
             {
                 Name = Name,
-                Addres = Addres
-                Email = Email
-                Telephone = Telephone
+                Address = Address,
+                Email = Email,
+                Telephone = Telephone,
                 Login = login,
                 Password = password
             };
@@ -29,7 +29,7 @@ namespace yakutcement
         {
             if (user.Level == Level.Admin && user.Id != id)
             {
-                var c = (from  in db.Clients where client.Id == id select client).FirstOrDefault<Client>();
+                var c = (from client in db.Clients where client.Id == id select client).FirstOrDefault<Client>();
                 db.Clients.Remove(c);
                 db.SaveChanges();
                 return true;

@@ -26,6 +26,9 @@ namespace yakutcement
         public string Email { get; set; }
         [StringLength(20)]
         public string Inn { get; set; }
+
+        public string Login { get; set; }
+        public string Password { get; set; }
         //public ClientType Type { get; set; }
     }
 
