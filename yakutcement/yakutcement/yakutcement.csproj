@@ -96,10 +96,6 @@
     </Compile>
     <Compile Include="IPerson.cs" />
     <Compile Include="LineSpeed.cs" />
-    <Compile Include="Migrations\202005121424535_first.cs" />
-    <Compile Include="Migrations\202005121424535_first.designer.cs">
-      <DependentUpon>202005121424535_first.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderProducts.cs" />
@@ -133,9 +129,6 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202005121424535_first.resx">
-      <DependentUpon>202005121424535_first.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PersonList.resx">
       <DependentUpon>PersonList.cs</DependentUpon>
