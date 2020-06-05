@@ -8,24 +8,22 @@ namespace yakutcement
 {
     public class IClient
     {
-        public static bool AddClient(DBContext db, string Name, string Address, string Email, string Telephone, string login, string password)
+        public static bool AddClient(DBContext db, string name, string address, string email, string tel)
         {
             Client c = new Client()
             {
-                Name = Name,
-                Address = Address,
-                Email = Email,
-                Telephone = Telephone,
-                Login = login,
-                Password = password
+                Name = name,
+                Address = address,
+                Email = email,
+                Telephone = tel,
             };
             db.Clients.Add(c);
             db.SaveChanges();
             return true;
         }
 
-
-        public static bool DeleteCleint(DBContext db, Client user, int id)
+    
+        public static bool DeleteCleint(DBContext db, Person user, int id)
         {
             if (user.Level == Level.Admin && user.Id != id)
             {
@@ -39,10 +37,10 @@ namespace yakutcement
                 return false;
             }
         }
-		
-        public static Cleint Login(DBContext db, string login, string password)
+
+        public static Person Login(DBContext db, string login, string password)
         {
-            var user = (from client in db.Clients where client.Login == login select client).FirstOrDefault<Client>();
+            var user = (from person in db.Persons where person.Login == login select person).FirstOrDefault<Person>();
             if (user != null && user.Password.CompareTo(password) == 0) return user;
             return null;
         }

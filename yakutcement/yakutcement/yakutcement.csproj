@@ -69,6 +69,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddClient1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClient1.Designer.cs">
+      <DependentUpon>AddClient1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ClientList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientList.Designer.cs">
+      <DependentUpon>ClientList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Context.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="Form1.cs">
@@ -89,6 +101,7 @@
     <Compile Include="Form3.Designer.cs">
       <DependentUpon>Form3.cs</DependentUpon>
     </Compile>
+    <Compile Include="IClient.cs" />
     <Compile Include="IPerson.cs" />
     <Compile Include="LineSpeed.cs" />
     <Compile Include="Migrations\202005130520557_FirstMigration.cs" />
@@ -120,6 +133,12 @@
     <Compile Include="SupplyPlan.cs" />
     <Compile Include="SupplyRemain.cs" />
     <Compile Include="warehouse.cs" />
+    <EmbeddedResource Include="AddClient1.resx">
+      <DependentUpon>AddClient1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientList.resx">
+      <DependentUpon>ClientList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
