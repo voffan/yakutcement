@@ -47,10 +47,5 @@ namespace yakutcement
                 MessageBox.Show(error.ToString());
             }
         }
-
-        private void AddProduct_Load(object sender, EventArgs e)
-        {
-
-        }
     }
 }

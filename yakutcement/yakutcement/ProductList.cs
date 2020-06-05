@@ -27,8 +27,8 @@ namespace yakutcement
             dataGridView1.Columns[0].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Название";
             dataGridView1.Columns[2].HeaderText = "Описание";
-            dataGridView1.Columns[3].HeaderText = "Цена(в рублях)";
-            if (User.Level == Level.Admin)
+            dataGridView1.Columns[3].HeaderText = "Цена(рублей за тонну)";
+            if (User.Level == Level.Admin || User.Level == Level.Manager)
             {
                 button2.Enabled = true;
                 button3.Enabled = true;
@@ -67,19 +67,19 @@ namespace yakutcement
 
         private void button4_Click(object sender, EventArgs e)
         {
-            DialogResult result = MessageBox.Show("Вы точно хотите удалить товар?", "Удаление", MessageBoxButtons.YesNo);
-            if (result == DialogResult.Yes)
+            try
             {
-                try
+                int product_id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                DialogResult result = MessageBox.Show("Вы точно хотите удалить товар?", "Удаление", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
                 {
-                    int product_id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
                     IProduct.DeleteProduct(DB, product_id);
                     dataGridView1.DataSource = DB.Products.ToList();
                 }
-                catch (Exception)
-                {
-                    MessageBox.Show("Выберите строку", "Ошибка");
-                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Выберите строку", "Ошибка");
             }
         }
 
