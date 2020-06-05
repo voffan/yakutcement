@@ -28,34 +28,7 @@ namespace yakutcement
         }
 
         private void button2_Click(object sender, EventArgs e)
-        {/*
-            DBContext db;
-            db = new DBContext();
-            db.Persons.Remove((from Person in db.Persons where Person.Id == 7 select Person).FirstOrDefault<Person>());
-            db.SaveChanges();
-            */
-             /*
-            DBContext db;
-            try
-            {
-                db = new DBContext();
-                Person p = new Person();
-                p.Id = 1;
-                p.FirstName = "Иван";
-                p.SecondName = "Иванович";
-                p.LastName = "Иванов";
-                p.BirthDate = DateTime.Today;
-                p.Position = Position.PlantMan;
-                p.Salary = 0;
-                p.Level = Level.PlantMan;
-                p.Login = "iii";
-                p.Password = "123";
-                db.Persons.Add(p);
-                db.SaveChanges();
-            }catch(Exception error){
-                // Handle error
-                MessageBox.Show(error.ToString());
-            }*/
+        {
             try
             {
                 Person p = IPerson.Login(mainForm.DB, textBox1.Text, textBox2.Text);
