@@ -86,7 +86,7 @@
             // выходToolStripMenuItem
             // 
             this.выходToolStripMenuItem.Name = "выходToolStripMenuItem";
-            this.выходToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.выходToolStripMenuItem.Size = new System.Drawing.Size(109, 22);
             this.выходToolStripMenuItem.Text = "Выход";
             this.выходToolStripMenuItem.Click += new System.EventHandler(this.выходToolStripMenuItem_Click);
             // 
@@ -165,6 +165,7 @@
             this.информацияОToolStripMenuItem.Name = "информацияОToolStripMenuItem";
             this.информацияОToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.информацияОToolStripMenuItem.Text = "Склады";
+            this.информацияОToolStripMenuItem.Click += new System.EventHandler(this.информацияОToolStripMenuItem_Click);
             // 
             // карьерToolStripMenuItem
             // 

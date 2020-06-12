@@ -95,12 +95,6 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
-    <Compile Include="Form3.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="Form3.Designer.cs">
-      <DependentUpon>Form3.cs</DependentUpon>
-    </Compile>
     <Compile Include="IClient.cs" />
     <Compile Include="IPerson.cs" />
     <Compile Include="LineSpeed.cs" />
@@ -133,6 +127,12 @@
     <Compile Include="SupplyPlan.cs" />
     <Compile Include="SupplyRemain.cs" />
     <Compile Include="warehouse.cs" />
+    <Compile Include="WarehouseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseList.Designer.cs">
+      <DependentUpon>WarehouseList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="AddClient1.resx">
       <DependentUpon>AddClient1.cs</DependentUpon>
     </EmbeddedResource>
@@ -157,6 +157,9 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="WarehouseList.resx">
+      <DependentUpon>WarehouseList.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="packages.config" />
     <None Include="Properties\DataSources\Person.datasource" />
     <None Include="Properties\Settings.settings">
