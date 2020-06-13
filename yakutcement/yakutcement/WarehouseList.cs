@@ -17,6 +17,10 @@ namespace yakutcement
         public Wherehouse Used { get; set; }
 =======
         public Wherehouse Place { get; set; }
+<<<<<<< HEAD
+>>>>>>> AddClient
+=======
+
 >>>>>>> AddClient
         public WarehouseList()
         {
