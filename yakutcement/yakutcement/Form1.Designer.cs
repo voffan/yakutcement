@@ -166,6 +166,7 @@
             this.информацияОToolStripMenuItem.Name = "информацияОToolStripMenuItem";
             this.информацияОToolStripMenuItem.Size = new System.Drawing.Size(197, 22);
             this.информацияОToolStripMenuItem.Text = "Склады";
+            this.информацияОToolStripMenuItem.Click += new System.EventHandler(this.информацияОToolStripMenuItem_Click);
             // 
             // карьерToolStripMenuItem
             // 

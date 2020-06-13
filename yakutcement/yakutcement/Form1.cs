@@ -14,8 +14,9 @@ namespace yakutcement
     {
         public DBContext DB { get; set; }
         public Person User { get; set; }
+        public Wherehouse Place { get; set; }
 
-        public Form1()
+    public Form1()
         {
             InitializeComponent();
         }
@@ -48,11 +49,19 @@ namespace yakutcement
             list.Show();
         }
 
+<<<<<<< HEAD
         private void товарыToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ProductList list = new ProductList();
             list.DB = this.DB;
             list.User = this.User;
+=======
+        private void информацияОToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            WarehouseList list = new WarehouseList();
+            list.DB = this.DB;
+            list.Place = this.Place;
+>>>>>>> AddClient
             list.Show();
         }
     }
