@@ -14,6 +14,7 @@ namespace yakutcement
     {
         public DBContext DB { get; set; }
         public Wherehouse Place { get; set; }
+
         public WarehouseList()
         {
             InitializeComponent();
