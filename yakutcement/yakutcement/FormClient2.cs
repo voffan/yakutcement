@@ -12,6 +12,7 @@ namespace yakutcement
 {
     public partial class FormClient2 : Form
     {
+        /*
         private FormClient1 mainForm;
 
         public FormClient2()
@@ -69,5 +70,6 @@ namespace yakutcement
             mainForm = new FormClient1();
             mainForm.DB = new DBContext();
         }
+        */
     }
 }

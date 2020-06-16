@@ -12,7 +12,7 @@ namespace yakutcement
 {
     public partial class Form2 : Form
     {
-        private Form4 mainForm;
+        private Form1 mainForm;
 
         public Form2()
         {
@@ -29,8 +29,7 @@ namespace yakutcement
 
         private void button2_Click(object sender, EventArgs e)
         {
-<<<<<<< HEAD
-=======
+            /*
             DBContext db;
             try
             {
@@ -52,7 +51,7 @@ namespace yakutcement
                 // Handle error
                 MessageBox.Show(error.ToString());
             }
->>>>>>> AddClient
+            */
             try
             {
                 Person p = IPerson.Login(mainForm.DB, textBox1.Text, textBox2.Text);
@@ -71,7 +70,7 @@ namespace yakutcement
 
         private void Form2_Load(object sender, EventArgs e)
         {
-            mainForm = new Form4();
+            mainForm = new Form1();
             mainForm.DB = new DBContext();
         }
     }

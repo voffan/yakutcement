@@ -175,11 +175,6 @@ namespace yakutcement
             DB.SaveChanges();
         }
 
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
     }
 
 }

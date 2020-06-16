@@ -13,28 +13,14 @@ namespace yakutcement
     public partial class WarehouseList : Form
     {
         public DBContext DB { get; set; }
-<<<<<<< HEAD
-        public Wherehouse Used { get; set; }
-=======
+        public Person User { get; set; }
         public Wherehouse Place { get; set; }
-<<<<<<< HEAD
->>>>>>> AddClient
-=======
 
->>>>>>> AddClient
         public WarehouseList()
         {
             InitializeComponent();
         }
-
-<<<<<<< HEAD
-=======
-        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
->>>>>>> AddClient
+        
         private void button1_Click(object sender, EventArgs e)
         {
             Close();
@@ -47,12 +33,44 @@ namespace yakutcement
             dataGridView1.Columns[2].Visible = false;
             dataGridView1.Columns[4].Visible = false;
             dataGridView1.Columns[1].HeaderText = "Значение";
-<<<<<<< HEAD
-            dataGridView1.Columns[3].HeaderText = "Данные склада";
-=======
-            dataGridView1.Columns[3].HeaderText = "Контактные данные";
->>>>>>> AddClient
+            dataGridView1.Columns[3].HeaderText = "Завод";
             dataGridView1.Columns[5].HeaderText = "Кладовщик";
+        }
+
+        private void button1_Click_1(object sender, EventArgs e)
+        {
+            Close();
+        }
+  
+        private void button2_Click(object sender, EventArgs e)
+        {
+            AddWarehouse addw = new AddWarehouse();
+            addw.DB = this.DB;
+            addw.User = this.User;
+            addw.ShowDialog();
+            dataGridView1.DataSource = DB.Warehouses.ToList();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+        }
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                int warehouse_id = Convert.ToInt32(dataGridView1.SelectedRows[0].Cells[0].Value.ToString());
+                DialogResult result = MessageBox.Show("Вы точно хотите удалить склад?", "Удаление", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    IWarehouse.DeleteWarehouse(DB, warehouse_id);
+                    dataGridView1.DataSource = DB.Warehouses.ToList();
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Выберите строку", "Ошибка");
+            }
         }
     }
 }

@@ -69,6 +69,40 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddClient.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClient1.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddClient1.Designer.cs">
+      <DependentUpon>AddClient1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddPerson.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddPerson.Designer.cs">
+      <DependentUpon>AddPerson.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddProduct.Designer.cs">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="AddWarehouse.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddWarehouse.Designer.cs">
+      <DependentUpon>AddWarehouse.cs</DependentUpon>
+    </Compile>
+    <Compile Include="IWarehouse.cs" />
+    <Compile Include="ClientList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ClientList.Designer.cs">
+      <DependentUpon>ClientList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Context.cs" />
     <Compile Include="Factory.cs" />
     <Compile Include="Form1.cs">
@@ -83,6 +117,13 @@
     <Compile Include="Form2.Designer.cs">
       <DependentUpon>Form2.cs</DependentUpon>
     </Compile>
+    <Compile Include="FormClient2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="IClient.cs" />
+    <Compile Include="IPerson.cs" />
+    <Compile Include="IProduct.cs" />
+    <Compile Include="LineSpeed.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Order.cs" />
     <Compile Include="OrderProducts.cs" />
@@ -95,6 +136,12 @@
     </Compile>
     <Compile Include="Product.cs" />
     <Compile Include="ProductionLine.cs" />
+    <Compile Include="ProductList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ProductList.Designer.cs">
+      <DependentUpon>ProductList.cs</DependentUpon>
+    </Compile>
     <Compile Include="ProductOperation.cs" />
     <Compile Include="ProductPlan.cs" />
     <Compile Include="Plant.cs" />
@@ -108,11 +155,35 @@
     <Compile Include="SupplyPlan.cs" />
     <Compile Include="SupplyRemain.cs" />
     <Compile Include="warehouse.cs" />
+    <Compile Include="WarehouseList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="WarehouseList.Designer.cs">
+      <DependentUpon>WarehouseList.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="AddClient1.resx">
+      <DependentUpon>AddClient1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddPerson.resx">
+      <DependentUpon>AddPerson.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddProduct.resx">
+      <DependentUpon>AddProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="AddWarehouse.resx">
+      <DependentUpon>AddWarehouse.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ClientList.resx">
+      <DependentUpon>ClientList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form2.resx">
       <DependentUpon>Form2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="PersonList.resx">
+      <DependentUpon>PersonList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="ProductList.resx">
       <DependentUpon>ProductList.cs</DependentUpon>

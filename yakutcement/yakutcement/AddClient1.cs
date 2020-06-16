@@ -45,7 +45,7 @@ namespace yakutcement
             INN = textBox5.Text;
             try
             {
-                IClient.AddClient(DB, name, address, telephone, email,INN);
+                //IClient.AddClient(DB, name, address, telephone, email,INN);
                 Close();
             }
             catch (Exception error)
